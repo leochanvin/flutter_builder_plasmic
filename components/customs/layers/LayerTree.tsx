@@ -216,9 +216,9 @@ function TreeRow(props: TreeRowProps) {
         onClick={() => onSelect?.(node.uid, node)}
       >
         {/* indentation spacer to keep full-width highlight */}
-        <div style={{ width: depth * 16 }} />
+        <div style={{ width: depth * 16, flexShrink: 0 }} />
         {caret}
-        <div style={{ flex: 1, width: "100%" }}>
+        <div style={{ flex: 1, minWidth: 0, overflow: "hidden" }}>
           <LayerRowItem
             name={node.name}
             originalName={node.name}

@@ -1,0 +1,170 @@
+/* LayerRowItem.module.css - Styles pour reproduire l'apparence originale */
+
+/* Container principal - reproduit le style Plasmic original */
+.layerRowItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 2px;
+  position: relative;
+  min-width: 0;
+  padding: 2px 4px;
+  border-radius: 8px;
+  cursor: default;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: var(--token-_gN_3-Mx800z);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* États de survol et sélection gérés par LayerTree */
+
+/* Container du contenu Plasmic - reproduit le style original */
+.plasmicContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 8px;
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Styles pour le texte - reproduit le style Plasmic original */
+.textContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--token-_gN_3-Mx800z);
+  font-size: 12px;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.textDisplay {
+  font-family: "Poppins", sans-serif;
+  color: var(--token-_gN_3-Mx800z);
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Zone d'édition inline - reproduit le style original */
+.editableText {
+  outline: none;
+  min-width: 10px;
+  font-family: "Poppins", sans-serif;
+  color: var(--token-_gN_3-Mx800z);
+  font-size: 12px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+/* Placeholder pour l'édition - reproduit le style original */
+.editableText[data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* Popup d'ajout de widget - reproduit le style Plasmic original */
+.popupAddWidget {
+  max-width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 100ms;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 100ms;
+  margin-left: auto;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.layerRowItem:hover .popupAddWidget {
+  opacity: 1;
+}
+
+/* Icône - reproduit le style Plasmic original */
+.icon {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  width: 12px;
+  flex-shrink: 0;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Caret pour l'expansion - reproduit le style LayerTree original */
+.caret {
+  width: 12px;
+  height: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  color: var(--token-_gN_3-Mx800z);
+  flex-shrink: 0;
+  min-width: 12px;
+}
+
+.caret:hover {
+  opacity: 0.7;
+}
+
+/* Espaceur pour l'indentation */
+.indentSpacer {
+  flex-shrink: 0;
+}
+
+/* Container pour le contenu principal */
+.contentContainer {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layerRowItem {
+    padding: 6px;
+    font-size: 11px;
+  }
+  
+  .popupAddWidget {
+    right: 8px;
+  }
+}

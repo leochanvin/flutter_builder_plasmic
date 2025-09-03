@@ -1,5 +1,6 @@
 import * as React from "react";
 import { PlasmicLayerItem } from "../../plasmic/flutter_builder/PlasmicLayerItem";
+import styles from "./LayerRowItem.module.css";
 
 export interface LayerRowItemProps {
   name: string;
@@ -51,12 +52,12 @@ export default function LayerRowItem(props: LayerRowItemProps) {
   };
 
   return (
-    <div style={{ width: "100%" }} onClick={onClickRow}>
+    <div className={styles.layerRowItem} onClick={onClickRow}>
       <PlasmicLayerItem
         args={{ data: { name } }}
         overrides={{
           text: {
-            style: { flex: 1, width: "auto", minWidth: 0 },
+            className: styles.textContainer,
             // Replace the text node with an inline editable div when editing
             render: () => (
               isEditing ? (
@@ -64,9 +65,12 @@ export default function LayerRowItem(props: LayerRowItemProps) {
                   ref={editableRef}
                   contentEditable
                   suppressContentEditableWarning
-                  style={{ outline: "none", minWidth: 10 }}
+                  className={styles.editableText}
                   onDoubleClick={(e) => e.stopPropagation()}
                   onKeyDown={(e) => {
+                    // Empêcher la propagation des événements clavier pour éviter les conflits
+                    e.stopPropagation();
+                    
                     if (e.key === "Enter") {
                       e.preventDefault();
                       commitFromEditable();
@@ -74,12 +78,15 @@ export default function LayerRowItem(props: LayerRowItemProps) {
                       e.preventDefault();
                       onCancel?.();
                     }
+                    // Permettre Backspace, Delete et autres touches d'édition
+                    // mais empêcher qu'elles déclenchent d'autres actions
                   }}
                   onBlur={() => commitFromEditable()}
                   data-placeholder={placeholder}
                 />
               ) : (
                 <div
+                  className={styles.textDisplay}
                   onDoubleClick={(e) => {
                     e.stopPropagation();
                     onStartEdit?.();
@@ -89,21 +96,14 @@ export default function LayerRowItem(props: LayerRowItemProps) {
                 </div>
               )
             )
-          }
-          ,
+          },
           popUpAddWidget: {
-            style: {
-              marginLeft: "auto",
-              position: "absolute",
-              right: 12,
-              top: "50%",
-              transform: "translateY(-50%)"
-            },
+            className: styles.popupAddWidget,
             // Pass ONLY onSelectFromDsl; PopUpAddWidget will inject our AddWidgetSelection child
             props: { onSelectFromDsl: (p: any) => onAddWidget?.(p) }
           },
           root: {
-            style: { width: "100%", position: "relative" }
+            className: styles.plasmicContainer
           }
         }}
       >

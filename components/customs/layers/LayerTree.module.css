@@ -3,67 +3,67 @@
   font-size: 12px;
   font-weight: 500;
   color: var(--token-_gN_3-Mx800z);
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
+
+/* Force overflow hidden sur tous les éléments enfants */
+.treeRoot * {
+  box-sizing: border-box;
+}
+
+/* Empêcher l'overflow des composants Plasmic */
+.row :global(.__wab_instance) {
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .row {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 4px;
+  padding: 2px 4px;
   border-radius: 8px;
   cursor: default;
   width: 100%;
   position: relative;
+  min-width: 0;
+  overflow: hidden;
+  box-sizing: border-box;
 }
+
 .row:hover {
   background: var(--token--FySWHG7u5ND);
 }
+
 .row.selected {
   background: var(--token--FySWHG7u5ND);
 }
-.row :global(.__wab_instance) {
-  cursor: default;
-}
-.row :global(.__wab_instance) .popUpAddWidget {
-  cursor: pointer;
-}
+
 .row.editing {
   outline: 2px solid #1a73e8;
   outline-offset: 0px;
   border-radius: 8px;
 }
 .caret {
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  cursor: pointer;
+  color: var(--token-_gN_3-Mx800z);
+  flex-shrink: 0;
+  min-width: 10px;
 }
-.nameInput {
-  font: inherit;
-  color: inherit;
-  background: transparent;
-  border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 4px;
-  padding: 2px 4px;
-  width: 100%;
+
+.caret:hover {
+  opacity: 0.7;
 }
+
 .children {
   /* indentation now handled by spacer in TSX to keep full width highlight */
   margin-left: 0;
-}
-
-.fullWidth {
-  width: 100%;
-}
-
-.selected {
-  background: var(--token--FySWHG7u5ND);
-  border-radius: 8px;
-}
-
-/* Placeholder style for inline contentEditable when empty */
-[contenteditable][data-placeholder]:empty:before {
-  content: attr(data-placeholder);
-  color: rgba(0,0,0,0.4);
 }
