@@ -1,6 +1,7 @@
 .treeRoot {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
+  font-family: Poppins, Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
   font-size: 12px;
+  font-weight: 500;
   color: var(--token-_gN_3-Mx800z);
 }
 .row {
@@ -10,12 +11,25 @@
   padding: 4px;
   border-radius: 8px;
   cursor: default;
+  width: 100%;
+  position: relative;
 }
 .row:hover {
   background: var(--token--FySWHG7u5ND);
 }
 .row.selected {
   background: var(--token--FySWHG7u5ND);
+}
+.row :global(.__wab_instance) {
+  cursor: default;
+}
+.row :global(.__wab_instance) .popUpAddWidget {
+  cursor: pointer;
+}
+.row.editing {
+  outline: 2px solid #1a73e8;
+  outline-offset: 0px;
+  border-radius: 8px;
 }
 .caret {
   width: 12px;
@@ -35,7 +49,8 @@
   width: 100%;
 }
 .children {
-  margin-left: 16px; /* indent */
+  /* indentation now handled by spacer in TSX to keep full width highlight */
+  margin-left: 0;
 }
 
 .fullWidth {
@@ -45,4 +60,10 @@
 .selected {
   background: var(--token--FySWHG7u5ND);
   border-radius: 8px;
+}
+
+/* Placeholder style for inline contentEditable when empty */
+[contenteditable][data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: rgba(0,0,0,0.4);
 }

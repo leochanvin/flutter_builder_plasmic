@@ -5,6 +5,7 @@ import {
   PlasmicPopUpAddWidget,
   DefaultPopUpAddWidgetProps
 } from "./plasmic/flutter_builder/PlasmicPopUpAddWidget";
+import AddWidgetSelection from "./AddWidgetSelection";
 
 // Your component props start with props for variants and slots you defined
 // in Plasmic, but you can add more here, like event handlers that you can
@@ -19,7 +20,9 @@ import {
 //
 // You can also stop extending from DefaultPopUpAddWidgetProps altogether and have
 // total control over the props for your component.
-export interface PopUpAddWidgetProps extends DefaultPopUpAddWidgetProps {}
+export interface PopUpAddWidgetProps extends DefaultPopUpAddWidgetProps {
+  onSelectFromDsl?: (widget: any) => void;
+}
 
 function PopUpAddWidget(props: PopUpAddWidgetProps) {
   // Use PlasmicPopUpAddWidget to render this component as it was
@@ -36,8 +39,12 @@ function PopUpAddWidget(props: PopUpAddWidgetProps) {
   //
   // By default, we are just piping all PopUpAddWidgetProps here, but feel free
   // to do whatever works for you.
-
-  return <PlasmicPopUpAddWidget {...props} />;
+  const { onSelectFromDsl, ...rest } = props;
+  return (
+    <PlasmicPopUpAddWidget {...rest}>
+      <AddWidgetSelection onSelectFromDsl={(w) => onSelectFromDsl?.(w)} />
+    </PlasmicPopUpAddWidget>
+  );
 }
 
 export default PopUpAddWidget;

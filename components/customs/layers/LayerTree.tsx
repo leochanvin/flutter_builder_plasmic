@@ -1,7 +1,8 @@
 import * as React from "react";
 import styles from "./LayerTree.module.css";
-import LayerItem from "../../LayerItem";
+import LayerRowItem from "./LayerRowItem";
 import { typeToIcon } from "./LayerIcons";
+import PopUpAddWidget from "../../PopUpAddWidget";
 
 /**
  * Generic tree node used by the tree after normalization
@@ -77,6 +78,8 @@ export interface LayerTreeProps {
   onSelect?: (uid: string, node: TreeNode) => void;
   /** when user renames a node */
   onRename?: (uid: string, newName: string, node: TreeNode) => void;
+  /** when user adds a widget from popup at a node */
+  onAddWidget?: (parentUid: string, preset: any, parentNode: TreeNode) => void;
 }
 
 export default function LayerTree({
@@ -85,6 +88,7 @@ export default function LayerTree({
   defaultExpanded,
   onSelect,
   onRename,
+  onAddWidget,
 }: LayerTreeProps) {
   const tree = React.useMemo(() => normalizeToTree(root), [root]);
 
@@ -127,7 +131,8 @@ export default function LayerTree({
     value: string
   ) => {
     const v = value.trim();
-    if (v && v !== node.name) onRename?.(uid, v, node);
+    const next = v.length === 0 ? node.name : v;
+    if (next !== node.name) onRename?.(uid, next, node);
     setEditingUid(null);
   };
 
@@ -143,6 +148,7 @@ export default function LayerTree({
         editingUid={editingUid}
         setEditingUid={setEditingUid}
         onRenameCommit={handleRenameCommit}
+        onAddWidget={onAddWidget}
       />
     </div>
   );
@@ -158,6 +164,7 @@ interface TreeRowProps {
   editingUid: string | null;
   setEditingUid: (uid: string | null) => void;
   onRenameCommit: (uid: string, node: TreeNode, value: string) => void;
+  onAddWidget?: (parentUid: string, preset: any, parentNode: TreeNode) => void;
 }
 
 function TreeRow(props: TreeRowProps) {
@@ -171,6 +178,7 @@ function TreeRow(props: TreeRowProps) {
     editingUid,
     setEditingUid,
     onRenameCommit,
+    onAddWidget,
   } = props;
 
   const hasChildren = node.children.length > 0;
@@ -198,48 +206,41 @@ function TreeRow(props: TreeRowProps) {
 
   const icon = <span>{typeToIcon(node.type)}</span>;
 
+  // Add action handled by default PopUpAddWidget styling; integration hook can be wired later
+
   return (
     <div>
       <div
-        className={`${styles.row} ${isSelected ? styles.selected : ""}`}
-        style={{ paddingLeft: depth === 0 ? 4 : 4 }}
+        className={`${styles.row} ${isSelected ? styles.selected : ""} ${isEditing ? styles.editing : ""}`}
+        style={{ width: "100%" }}
         onClick={() => onSelect?.(node.uid, node)}
-        onDoubleClick={() => setEditingUid(node.uid)}
       >
+        {/* indentation spacer to keep full-width highlight */}
+        <div style={{ width: depth * 16 }} />
         {caret}
-        {isEditing ? (
-          <input
-            className={styles.nameInput}
-            autoFocus
-            defaultValue={node.name}
-            onKeyDown={(e) => {
-              if (e.key === "Enter") {
-                onRenameCommit(
-                  node.uid,
-                  node,
-                  (e.target as HTMLInputElement).value
+        <div style={{ flex: 1, width: "100%" }}>
+          <LayerRowItem
+            name={node.name}
+            originalName={node.name}
+            icon={icon}
+            isEditing={isEditing}
+            onClickRow={() => onSelect?.(node.uid, node)}
+            onStartEdit={() => setEditingUid(node.uid)}
+            onCommit={(val) => onRenameCommit(node.uid, node, val)}
+            onCancel={() => setEditingUid(null)}
+            onAddWidget={(preset) => {
+              console.log('[LayerTree] onAddWidget', { parentUid: node.uid, preset, node, hasHandler: !!onAddWidget });
+              if (onAddWidget) {
+                onAddWidget(node.uid, preset, node);
+              } else {
+                // Fallback global event if no handler provided by parent
+                window.dispatchEvent(
+                  new CustomEvent('dsl-add-widget', { detail: { parentUid: node.uid, preset } })
                 );
-              } else if (e.key === "Escape") {
-                setEditingUid(null);
               }
             }}
-            onBlur={(e) =>
-              onRenameCommit(node.uid, node, e.currentTarget.value)
-            }
           />
-        ) : (
-          // Render the Plasmic-designed row while passing the name and putting the type icon as children slot
-          <div
-            style={{
-              ...(isSelected
-                ? { background: "var(--token--FySWHG7u5ND)", borderRadius: 8 }
-                : {}),
-              flex: 1
-            }}
-          >
-            <LayerItem data={{ name: node.name }}>{icon}</LayerItem>
-          </div>
-        )}
+        </div>
       </div>
 
       {hasChildren && isOpen && (

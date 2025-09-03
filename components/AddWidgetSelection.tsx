@@ -5,6 +5,11 @@ import {
   PlasmicAddWidgetSelection,
   DefaultAddWidgetSelectionProps
 } from "./plasmic/flutter_builder/PlasmicAddWidgetSelection";
+import WidgetItem from "./WidgetItem";
+import { RowEmpty } from "../lib/dsl/presets/row";
+import { ColumnEmpty } from "../lib/dsl/presets/column";
+import { ContainerEmpty } from "../lib/dsl/presets/container";
+import { TextCalendrier } from "../lib/dsl/presets/text";
 import { HTMLElementRefOf } from "@plasmicapp/react-web";
 
 // Your component props start with props for variants and slots you defined
@@ -21,7 +26,9 @@ import { HTMLElementRefOf } from "@plasmicapp/react-web";
 // You can also stop extending from DefaultAddWidgetSelectionProps altogether and have
 // total control over the props for your component.
 export interface AddWidgetSelectionProps
-  extends DefaultAddWidgetSelectionProps {}
+  extends DefaultAddWidgetSelectionProps {
+  onSelectFromDsl?: (widget: any) => void;
+}
 
 function AddWidgetSelection_(
   props: AddWidgetSelectionProps,
@@ -42,7 +49,27 @@ function AddWidgetSelection_(
   // By default, we are just piping all AddWidgetSelectionProps here, but feel free
   // to do whatever works for you.
 
-  return <PlasmicAddWidgetSelection frame127={{ ref }} {...props} />;
+  const { onSelectFromDsl, ...rest } = props;
+  const presets = [TextCalendrier, RowEmpty, ColumnEmpty, ContainerEmpty];
+  return (
+    <PlasmicAddWidgetSelection
+      frame127={{ ref }}
+      {...rest}
+      overrides={{
+        frame132: {
+          render: () => (
+            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              {presets.map((p) => (
+                <div key={p.uid} style={{ cursor: "pointer" }} onClick={() => { console.log("[AddWidgetSelection] click preset", p); onSelectFromDsl?.(p); }}>
+                  <WidgetItem name={p} />
+                </div>
+              ))}
+            </div>
+          )
+        }
+      }}
+    />
+  );
 }
 
 const AddWidgetSelection = React.forwardRef(AddWidgetSelection_);
