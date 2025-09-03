@@ -1,0 +1,22 @@
+.root:global(.__wab_instance) {
+  width: 300px;
+  box-sizing: border-box;
+  object-fit: cover;
+  background: #ffffff;
+  position: relative;
+  overflow: auto;
+  box-shadow: 0px 0px 12px 0px #00000040, 0px 0px 0px 0.5px #e5e7eb;
+  border-radius: var(--token-yGtnihTQp71w);
+  padding: var(--token-Gk5hk9Wq5lSG);
+}
+.ariaListBox:global(.__wab_instance) {
+  box-sizing: border-box;
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  outline-style: none;
+  min-width: 0;
+}
+.menuSection__y1KkW:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+}

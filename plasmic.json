@@ -1,0 +1,934 @@
+{
+  "platform": "nextjs",
+  "code": {
+    "lang": "ts",
+    "scheme": "blackbox",
+    "reactRuntime": "classic"
+  },
+  "style": {
+    "scheme": "css-modules",
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+  },
+  "images": {
+    "scheme": "public-files",
+    "publicDir": "../public",
+    "publicUrlPrefix": "/"
+  },
+  "tokens": {
+    "scheme": "theo",
+    "tokensFilePath": "plasmic-tokens.theo.json"
+  },
+  "srcDir": "components",
+  "defaultPlasmicDir": "./plasmic",
+  "projects": [
+    {
+      "projectId": "8PtdGodUbexNYgkuyBUcWu",
+      "projectApiToken": "34o5R5KswluuZ4sD83F88oQrcLWsNNeUpCptQ8Okf4hYqgjnHnX2idGAlhtB7WWQQelNAInf5XFazR1cGw",
+      "projectName": "plasmic-embed-css",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/plasmic_embed_css/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "plasmic/plasmic_embed_css/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/plasmic_embed_css/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/plasmic_embed_css/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "qF0uJxFztB",
+          "name": "EmbedCss",
+          "displayName": "global-embed-css",
+          "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
+      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectName": "react-awesome-reveal",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_awesome_reveal/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_awesome_reveal/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "R6s1FdhksG",
+          "name": "Reveal",
+          "displayName": "hostless-reveal",
+          "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "gmeH6XgPaBtkt51HunAo4g",
+      "projectApiToken": "LBbn8U2dmbpX9oeuRsYNyEKki39EXydGQgs9vBvR5sLHfGEZsK4owvOj7Q7SnflW4ASIEdLFAeeoxGxXZ8dJtA",
+      "projectName": "react-aria",
+      "version": ">0.0.0",
+      "cssFilePath": "plasmic/react_aria/plasmic.module.css",
+      "components": [],
+      "icons": [],
+      "images": [],
+      "indirect": true,
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/react_aria/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/react_aria/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "QswWn7k1U7ET",
+          "name": "BaseSelect",
+          "displayName": "plasmic-react-aria-select",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSelect"
+        },
+        {
+          "id": "XEco5EOfFG7-",
+          "name": "BaseSelectValue",
+          "displayName": "plasmic-react-aria-select-value",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSelect"
+        },
+        {
+          "id": "YsCvUUXRgPKy",
+          "name": "BaseComboBox",
+          "displayName": "plasmic-react-aria-combobox",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerComboBox"
+        },
+        {
+          "id": "HvUCgqiPzPEX",
+          "name": "BaseButton",
+          "displayName": "plasmic-react-aria-button",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerButton"
+        },
+        {
+          "id": "me7KTdO_KIkf",
+          "name": "BaseLabel",
+          "displayName": "plasmic-react-aria-label",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerLabel"
+        },
+        {
+          "id": "4sLOTHHFrzj2",
+          "name": "BaseListBox",
+          "displayName": "plasmic-react-aria-listbox",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerListBox",
+          "helper": {
+            "name": "listboxHelpers",
+            "importPath": "@plasmicpkgs/react-aria/skinny/registerListBox"
+          }
+        },
+        {
+          "id": "PoAYkttnnKt8",
+          "name": "BaseListBoxItem",
+          "displayName": "plasmic-react-aria-listbox-item",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerListBoxItem"
+        },
+        {
+          "id": "zIp51FL8KHRa",
+          "name": "BasePopover",
+          "displayName": "plasmic-react-aria-popover",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerPopover"
+        },
+        {
+          "id": "P1zT4UvhSciD",
+          "name": "BaseInput",
+          "displayName": "plasmic-react-aria-input",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerInput",
+          "helper": {
+            "name": "inputHelpers",
+            "importPath": "@plasmicpkgs/react-aria/skinny/registerInput"
+          }
+        },
+        {
+          "id": "IRebgwZ5KOxr",
+          "name": "BaseSwitch",
+          "displayName": "plasmic-react-aria-switch",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSwitch"
+        },
+        {
+          "id": "t7JSdrAmVPUA",
+          "name": "BaseCheckbox",
+          "displayName": "plasmic-react-aria-checkbox",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerCheckbox"
+        },
+        {
+          "id": "J6dFzk9sLhiL",
+          "name": "BaseCheckboxGroup",
+          "displayName": "plasmic-react-aria-checkboxGroup",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerCheckboxGroup"
+        },
+        {
+          "id": "YiLyhyFTHV9y",
+          "name": "BaseRadioGroup",
+          "displayName": "plasmic-react-aria-radioGroup",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerRadioGroup"
+        },
+        {
+          "id": "L01PBsCNswpe",
+          "name": "BaseRadio",
+          "displayName": "plasmic-react-aria-radioGroup-radio",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerRadio"
+        },
+        {
+          "id": "rMswhyNZvi7B",
+          "name": "BaseTextField",
+          "displayName": "plasmic-react-aria-textField",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerTextField"
+        },
+        {
+          "id": "sHCwEg6H_Y31",
+          "name": "BaseModal",
+          "displayName": "plasmic-react-aria-modal",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerModal"
+        },
+        {
+          "id": "_Qjx-IzfLF6l",
+          "name": "BaseTooltip",
+          "displayName": "plasmic-react-aria-tooltip",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerTooltip"
+        },
+        {
+          "id": "kp28MgccfwlQ",
+          "name": "BaseDialogTrigger",
+          "displayName": "plasmic-react-aria-dialogTrigger",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialogTrigger"
+        },
+        {
+          "id": "51hRux-iu0RF",
+          "name": "BaseText",
+          "displayName": "plasmic-react-aria-text",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerText"
+        },
+        {
+          "id": "-_rmqfmyqbxd",
+          "name": "BaseText",
+          "displayName": "plasmic-react-aria-description",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerText"
+        },
+        {
+          "id": "iIIdXu16I-k-",
+          "name": "BaseSection",
+          "displayName": "plasmic-react-aria-listbox-section",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSection"
+        },
+        {
+          "id": "kv1js5i5hCxL",
+          "name": "BaseSlider",
+          "displayName": "plasmic-react-aria-slider",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSlider"
+        },
+        {
+          "id": "ZoPZHoboZWhP",
+          "name": "BaseSliderOutput",
+          "displayName": "plasmic-react-aria-slider-sliderOutput",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSliderOutput"
+        },
+        {
+          "id": "kiBpPWTzQmrA",
+          "name": "BaseSliderThumb",
+          "displayName": "plasmic-react-aria-slider-sliderThumb",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSliderThumb"
+        },
+        {
+          "id": "flW7Lvcc_jyV",
+          "name": "BaseSliderTrack",
+          "displayName": "plasmic-react-aria-slider-sliderTrack",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSliderTrack"
+        },
+        {
+          "id": "kbh41PnPdelo",
+          "name": "BaseSlider",
+          "displayName": "plasmic-react-aria-slider-range-slider",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerSlider"
+        },
+        {
+          "id": "FCiuD5hxcsIL",
+          "name": "BaseHeading",
+          "displayName": "plasmic-react-aria-heading",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerHeading"
+        },
+        {
+          "id": "z-WtOn_lG8-p",
+          "name": "BaseTextArea",
+          "displayName": "plasmic-react-aria-textarea",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerTextArea",
+          "helper": {
+            "name": "inputHelpers",
+            "importPath": "@plasmicpkgs/react-aria/skinny/registerTextArea"
+          }
+        },
+        {
+          "id": "ve6CbDRk1Jw-",
+          "name": "BaseOverlayArrow",
+          "displayName": "plasmic-react-aria-overlayArrow",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerOverlayArrow"
+        },
+        {
+          "id": "xPmAZLS8Wf-7",
+          "name": "BaseDialog",
+          "displayName": "plasmic-react-aria-dialog",
+          "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
+        }
+      ],
+      "customFunctions": []
+    },
+    {
+      "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+      "projectApiToken": "x1oBGzXeyeRS3DzcOXT6BzOjEKV1yLPjGWmqGwu2NB3LBAFkXXp6P12KEOakpTgQljeUkL68FNeLcAYi4Wwug",
+      "projectName": "Flutter Builder",
+      "version": "latest",
+      "cssFilePath": "plasmic/flutter_builder/plasmic.module.css",
+      "components": [
+        {
+          "id": "SNW5XY7pn134",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/index.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/"
+        },
+        {
+          "id": "4uVmaOMPkJzP",
+          "name": "EditorPage",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicEditorPage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/editor-page.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicEditorPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/editor-page"
+        },
+        {
+          "id": "X1rLzBCI4G4J",
+          "name": "Label",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicLabel.tsx",
+          "importSpec": {
+            "modulePath": "Label.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicLabel.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "fNeSTvGFB_H6",
+          "name": "TextInput",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicTextInput.tsx",
+          "importSpec": {
+            "modulePath": "TextInput.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicTextInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "xAMSIykj68vN",
+          "name": "TextAreaInput",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicTextAreaInput.tsx",
+          "importSpec": {
+            "modulePath": "TextAreaInput.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicTextAreaInput.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "s9JU8DR9oJw5",
+          "name": "Description",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicDescription.tsx",
+          "importSpec": {
+            "modulePath": "Description.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicDescription.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "erV3fXnIteTe",
+          "name": "TextField",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicTextField.tsx",
+          "importSpec": {
+            "modulePath": "TextField.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicTextField.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "b6tNq7VAA1a2",
+          "name": "MenuItem",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicMenuItem.tsx",
+          "importSpec": {
+            "modulePath": "MenuItem.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicMenuItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "-BoOsBgt6XwQ",
+          "name": "MenuSection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicMenuSection.tsx",
+          "importSpec": {
+            "modulePath": "MenuSection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicMenuSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "RCuBMqy0CZW8",
+          "name": "MenuPopover",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicMenuPopover.tsx",
+          "importSpec": {
+            "modulePath": "MenuPopover.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicMenuPopover.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "r_7ePccTT7BK",
+          "name": "Select",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicSelect.tsx",
+          "importSpec": {
+            "modulePath": "Select.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicSelect.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "xwsQuqJI9T8H",
+          "name": "Button",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicButton.tsx",
+          "importSpec": {
+            "modulePath": "Button.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "DPg0ApQ_34Tf",
+          "name": "SelectButton",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicSelectButton.tsx",
+          "importSpec": {
+            "modulePath": "SelectButton.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicSelectButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "wgw_IZFUuC2U",
+          "name": "SelectPageButton",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicSelectPageButton.tsx",
+          "importSpec": {
+            "modulePath": "SelectPageButton.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicSelectPageButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "6lDIF369LXXt",
+          "name": "IconButton",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicIconButton.tsx",
+          "importSpec": {
+            "modulePath": "IconButton.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicIconButton.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "1T_9MyAFtbND",
+          "name": "IconButtonSelectProperty",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicIconButtonSelectProperty.tsx",
+          "importSpec": {
+            "modulePath": "IconButtonSelectProperty.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicIconButtonSelectProperty.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "iS68sQYkDEs4",
+          "name": "PropertiesTextfield",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPropertiesTextfield.tsx",
+          "importSpec": {
+            "modulePath": "PropertiesTextfield.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesTextfield.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "oSh0nPygqs8l",
+          "name": "OverlayArrow",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicOverlayArrow.tsx",
+          "importSpec": {
+            "modulePath": "OverlayArrow.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicOverlayArrow.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "Yzu8l2Jjln7_",
+          "name": "Popover",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPopover.tsx",
+          "importSpec": {
+            "modulePath": "Popover.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPopover.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "pvtNa1_sMQiD",
+          "name": "AddWidgetSelection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicAddWidgetSelection.tsx",
+          "importSpec": {
+            "modulePath": "AddWidgetSelection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicAddWidgetSelection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "bklbrvjs8_3B",
+          "name": "PopUpAddWidget",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPopUpAddWidget.tsx",
+          "importSpec": {
+            "modulePath": "PopUpAddWidget.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPopUpAddWidget.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "YTeucjJNpOif",
+          "name": "WidgetItem",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicWidgetItem.tsx",
+          "importSpec": {
+            "modulePath": "WidgetItem.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicWidgetItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "6pPyMMH9n6vH",
+          "name": "LayerItem",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicLayerItem.tsx",
+          "importSpec": {
+            "modulePath": "LayerItem.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicLayerItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        }
+      ],
+      "icons": [
+        {
+          "id": "33tkUsgvZnao",
+          "name": "SidebarLeftIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__SidebarLeft.tsx"
+        },
+        {
+          "id": "fc-pN7nXLrIF",
+          "name": "SearchNormalIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__SearchNormal.tsx"
+        },
+        {
+          "id": "fgJFPSnfJdgx",
+          "name": "Frame21Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame21.tsx"
+        },
+        {
+          "id": "oXnQ8H7OJDX5",
+          "name": "HashtagIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Hashtag.tsx"
+        },
+        {
+          "id": "L56iOpBPHWm3",
+          "name": "RowVerticalIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__RowVertical.tsx"
+        },
+        {
+          "id": "9YocSXGudkza",
+          "name": "RowHorizontalIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__RowHorizontal.tsx"
+        },
+        {
+          "id": "SlMTsG1R9Ji3",
+          "name": "TextIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Text.tsx"
+        },
+        {
+          "id": "LyMuBGYofAoe",
+          "name": "CropIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Crop.tsx"
+        },
+        {
+          "id": "Q6djqQjnpNhO",
+          "name": "GalleryIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Gallery.tsx"
+        },
+        {
+          "id": "sZUZjUh3Oz9p",
+          "name": "_3SquareIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon___3Square.tsx"
+        },
+        {
+          "id": "CKMwzJE1Cpe2",
+          "name": "Firebase1Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Firebase1.tsx"
+        },
+        {
+          "id": "vHe45W_eJyZl",
+          "name": "GithubAltSvgrepoCom1Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__GithubAltSvgrepoCom1.tsx"
+        },
+        {
+          "id": "wCHNHyTidWxE",
+          "name": "BrushIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Brush.tsx"
+        },
+        {
+          "id": "uPTr_22U4DZB",
+          "name": "DriverIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Driver.tsx"
+        },
+        {
+          "id": "89dyH9w9YqPy",
+          "name": "Setting2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Setting2.tsx"
+        },
+        {
+          "id": "Y1drDpHMtTwe",
+          "name": "DocumentCodeIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__DocumentCode.tsx"
+        },
+        {
+          "id": "SV13G6O40jAh",
+          "name": "PlayIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Play.tsx"
+        },
+        {
+          "id": "fH_8Hol_CL60",
+          "name": "RulerPenIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__RulerPen.tsx"
+        },
+        {
+          "id": "AgZq5Wfc4mlx",
+          "name": "FlashIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Flash.tsx"
+        },
+        {
+          "id": "ufIj1KYsVX7g",
+          "name": "Driver2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Driver2.tsx"
+        },
+        {
+          "id": "XlBUUZUGrvvO",
+          "name": "ScrollIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Scroll.tsx"
+        },
+        {
+          "id": "1xGEf6lNVKha",
+          "name": "InfoCircleIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__InfoCircle.tsx"
+        },
+        {
+          "id": "ilzEL35aXFs0",
+          "name": "Setting4Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Setting4.tsx"
+        },
+        {
+          "id": "MjC4t4GUpoMA",
+          "name": "Frame64Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame64.tsx"
+        },
+        {
+          "id": "mul6QsWkCRDG",
+          "name": "Frame65Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame65.tsx"
+        },
+        {
+          "id": "5HoE_D7oIRV0",
+          "name": "Frame66Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame66.tsx"
+        },
+        {
+          "id": "jzoQOXreZink",
+          "name": "Frame68Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame68.tsx"
+        },
+        {
+          "id": "hPhtedE6EoXZ",
+          "name": "Frame69Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame69.tsx"
+        },
+        {
+          "id": "2DYoAq61KZ2c",
+          "name": "Frame67Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame67.tsx"
+        },
+        {
+          "id": "fmX1qYom8hWX",
+          "name": "Frame70Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame70.tsx"
+        },
+        {
+          "id": "DLvncZrm39kl",
+          "name": "DocumentDownloadIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__DocumentDownload.tsx"
+        },
+        {
+          "id": "NWSFS5EltLb3",
+          "name": "Send2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Send2.tsx"
+        },
+        {
+          "id": "_knAJuId6YYv",
+          "name": "CircleIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Circle.tsx"
+        },
+        {
+          "id": "Y9stZjaD1AZn",
+          "name": "ChevronDownIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__ChevronDown.tsx"
+        },
+        {
+          "id": "fu4dAXU-Gy_l",
+          "name": "Plus1512SvgrepoComSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Plus1512SvgrepoComSvg.tsx"
+        },
+        {
+          "id": "wv1Sfzk4wcbB",
+          "name": "FlutterLogoSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__FlutterLogoSvg.tsx"
+        },
+        {
+          "id": "hlINFESFGFYX",
+          "name": "AdditemSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__AdditemSvg.tsx"
+        },
+        {
+          "id": "caclyyljkkHl",
+          "name": "LayerSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__LayerSvg.tsx"
+        },
+        {
+          "id": "4ZBAVrfYsOPW",
+          "name": "Grid1SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Grid1Svg.tsx"
+        },
+        {
+          "id": "nzKYPxUqU_GY",
+          "name": "ProgrammingArrowsSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__ProgrammingArrowsSvg.tsx"
+        },
+        {
+          "id": "aol3vUpekla2",
+          "name": "FolderOpenSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__FolderOpenSvg.tsx"
+        },
+        {
+          "id": "-DFike-jSTm_",
+          "name": "TriangleFilledIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__TriangleFilled.tsx"
+        },
+        {
+          "id": "slf1P2N2Q4hY",
+          "name": "SidebarLeft2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__SidebarLeft2.tsx"
+        },
+        {
+          "id": "46gOz3Om8bFj",
+          "name": "SearchNormal2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__SearchNormal2.tsx"
+        },
+        {
+          "id": "XkcTvfkiKzEl",
+          "name": "Maximize4Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Maximize4.tsx"
+        },
+        {
+          "id": "g4hMjP43HGnx",
+          "name": "XIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__X.tsx"
+        },
+        {
+          "id": "_UNGDKd8h_ZD",
+          "name": "Text2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Text2.tsx"
+        },
+        {
+          "id": "RyGIdK_A4HsE",
+          "name": "RowVertical2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__RowVertical2.tsx"
+        },
+        {
+          "id": "apgjLkPEsSZg",
+          "name": "RowHorizontal2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__RowHorizontal2.tsx"
+        },
+        {
+          "id": "3mf_WzSzT1n4",
+          "name": "Gallery2Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Gallery2.tsx"
+        },
+        {
+          "id": "y0jcj_9N0zel",
+          "name": "Element3Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Element3.tsx"
+        },
+        {
+          "id": "NYc_vccVQFxf",
+          "name": "Element4Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Element4.tsx"
+        },
+        {
+          "id": "HBSAOdtQpd66",
+          "name": "SliderHorizontalIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__SliderHorizontal.tsx"
+        },
+        {
+          "id": "0afhUop2FR1Q",
+          "name": "Grid6Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Grid6.tsx"
+        }
+      ],
+      "images": [
+        {
+          "id": "9RwanJLKBA65",
+          "name": "Home Screen",
+          "filePath": "../public/plasmic/flutter_builder/images/homeScreen.png"
+        },
+        {
+          "id": "FOTYtluPV7wy",
+          "name": "iPhone 13 - Midnight",
+          "filePath": "../public/plasmic/flutter_builder/images/iPhone13Midnight.png"
+        },
+        {
+          "id": "prnp7JZA4M6P",
+          "name": "Plus Math",
+          "filePath": "../public/plasmic/flutter_builder/images/plusMath.png"
+        },
+        {
+          "id": "HwN7JPAeir_V",
+          "name": "BuilderBackgroundPoints.png",
+          "filePath": "../public/plasmic/flutter_builder/images/builderBackgroundPointsPng.png"
+        },
+        {
+          "id": "dNLbaiYnt9rU",
+          "name": "firebase.svg",
+          "filePath": "../public/plasmic/flutter_builder/images/firebaseSvg.svg"
+        }
+      ],
+      "indirect": false,
+      "globalContextsFilePath": "plasmic/flutter_builder/PlasmicGlobalContextsProvider.tsx",
+      "splitsProviderFilePath": "",
+      "styleTokensProviderFilePath": "plasmic/flutter_builder/PlasmicStyleTokensProvider.tsx",
+      "projectModuleFilePath": "plasmic/flutter_builder/plasmic.tsx",
+      "codeComponents": [
+        {
+          "id": "mSuwkBOsWnxE",
+          "name": "PlasmicHead",
+          "displayName": "hostless-plasmic-head",
+          "componentImportPath": "@plasmicapp/react-web"
+        },
+        {
+          "id": "ldcaneWnkdca",
+          "name": "Fetcher",
+          "displayName": "plasmic-data-source-fetcher",
+          "componentImportPath": "@plasmicapp/react-web/lib/data-sources"
+        }
+      ],
+      "customFunctions": []
+    }
+  ],
+  "globalVariants": {
+    "variantGroups": [
+      {
+        "id": "0Fkg4IJ0Mdq3",
+        "name": "Screen",
+        "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+        "contextFilePath": "plasmic/flutter_builder/PlasmicGlobalVariant__Screen.tsx"
+      },
+      {
+        "id": "cQH84q-hFMlX",
+        "name": "UnnamedGlobalGroupOfVariants",
+        "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+        "contextFilePath": "plasmic/flutter_builder/PlasmicGlobalVariant__UnnamedGlobalGroupOfVariants.tsx"
+      }
+    ]
+  },
+  "wrapPagesWithGlobalContexts": true,
+  "nextjsConfig": {
+    "pagesDir": "../pages"
+  },
+  "cliVersion": "0.1.342",
+  "$schema": "https://unpkg.com/@plasmicapp/cli@0.1.342/dist/plasmic.schema.json"
+}

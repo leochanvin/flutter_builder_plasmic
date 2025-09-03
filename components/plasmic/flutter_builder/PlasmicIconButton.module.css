@@ -1,0 +1,72 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: var(--token-3kIELR5Y6vpj);
+  position: relative;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 200ms;
+  border-radius: 10px;
+  padding: 0px;
+}
+.rootoutlined {
+  outline-style: solid;
+  outline-color: var(--token-_T1kn2IVN5gM);
+  outline-width: 1px;
+}
+.root:hover {
+  background: var(--token-MirEotCGK-8M);
+  box-shadow: 0px 4px 16px 0px #0000001a;
+  height: 40px;
+  width: 40px;
+}
+.root:active {
+  background: var(--token-MirEotCGK-8M);
+}
+.slotTargetIconSelected {
+  color: var(--token-_gN_3-Mx800z);
+}
+.slotTargetIconSelected > *,
+.slotTargetIconSelected > :global(.__wab_slot) > *,
+.slotTargetIconSelected > :global(.__wab_slot) > :global(.__wab_slot) > *,
+.slotTargetIconSelected
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > *,
+.slotTargetIconSelected > picture > img,
+.slotTargetIconSelected > :global(.__wab_slot) > picture > img,
+.slotTargetIconSelected
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img,
+.slotTargetIconSelected
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 300ms;
+}
+.svg__laCr {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  height: 24px;
+  flex-shrink: 0;
+}

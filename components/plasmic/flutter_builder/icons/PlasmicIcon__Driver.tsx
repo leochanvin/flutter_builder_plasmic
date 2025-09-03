@@ -1,0 +1,44 @@
+/* eslint-disable */
+/* tslint:disable */
+// @ts-nocheck
+/* prettier-ignore-start */
+import React from "react";
+import { classNames } from "@plasmicapp/react-web";
+
+export type DriverIconProps = React.ComponentProps<"svg"> & {
+  title?: string;
+};
+
+export function DriverIcon(props: DriverIconProps) {
+  const { className, style, title, ...restProps } = props;
+  return (
+    <svg
+      xmlns={"http://www.w3.org/2000/svg"}
+      fill={"none"}
+      viewBox={"0 0 24 24"}
+      height={"1em"}
+      className={classNames("plasmic-default__svg", className)}
+      style={style}
+      {...restProps}
+    >
+      {title && <title>{title}</title>}
+
+      <path
+        fill={"currentColor"}
+        d={
+          "M19.32 10.75H4.69c-1.89 0-3.43-1.54-3.43-3.43V4.69c0-1.89 1.54-3.43 3.43-3.43h14.63c1.89 0 3.43 1.54 3.43 3.43v2.63c0 1.89-1.54 3.43-3.43 3.43m-14.64-8c-1.07 0-1.93.87-1.93 1.93v2.63c0 1.07.87 1.93 1.93 1.93h14.63c1.07 0 1.93-.87 1.93-1.93V4.68c0-1.07-.87-1.93-1.93-1.93zm14.64 20H4.69c-1.89 0-3.43-1.54-3.43-3.43v-2.63c0-1.89 1.54-3.43 3.43-3.43h14.63c1.89 0 3.43 1.54 3.43 3.43v2.63c0 1.89-1.54 3.43-3.43 3.43m-14.64-8c-1.07 0-1.93.87-1.93 1.93v2.63c0 1.07.87 1.93 1.93 1.93h14.63c1.07 0 1.93-.87 1.93-1.93v-2.63c0-1.07-.87-1.93-1.93-1.93z"
+        }
+      ></path>
+
+      <path
+        fill={"currentColor"}
+        d={
+          "M6 7.75c-.41 0-.75-.34-.75-.75V5c0-.41.34-.75.75-.75s.75.34.75.75v2c0 .41-.34.75-.75.75m4 0c-.41 0-.75-.34-.75-.75V5c0-.41.34-.75.75-.75s.75.34.75.75v2c0 .41-.34.75-.75.75m-4 12c-.41 0-.75-.34-.75-.75v-2c0-.41.34-.75.75-.75s.75.34.75.75v2c0 .41-.34.75-.75.75m4 0c-.41 0-.75-.34-.75-.75v-2c0-.41.34-.75.75-.75s.75.34.75.75v2c0 .41-.34.75-.75.75m8-13h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75m0 12h-4c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h4c.41 0 .75.34.75.75s-.34.75-.75.75"
+        }
+      ></path>
+    </svg>
+  );
+}
+
+export default DriverIcon;
+/* prettier-ignore-end */

@@ -1,0 +1,78 @@
+.ariaInput:global(.__wab_instance) {
+  box-sizing: border-box;
+  color: var(--token-_gN_3-Mx800z);
+  font-family: "Poppins", sans-serif;
+  font-size: var(--token-S0eYeaJa_fp1);
+  line-height: var(--token-v0PtuF01J2Zb);
+  width: 100%;
+  position: relative;
+  display: block;
+  text-align: left;
+  cursor: text;
+  white-space: pre;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background: #ffffff;
+  min-width: 0;
+  padding: 4px 4px 4px 12px;
+  border-width: 1px;
+  border-style: none;
+}
+.ariaInput[data-disabled]:global(.__wab_instance) {
+  cursor: not-allowed;
+}
+.ariaInput[data-hovered]:global(.__wab_instance) {
+  background: none;
+  border-radius: 6px;
+  padding: 0px;
+  border-color: #000000;
+}
+.ariaInput[data-focused]:global(.__wab_instance) {
+  background: none;
+  pointer-events: auto;
+  border-radius: 6px;
+  padding: 0px;
+  border-style: none;
+}
+.ariaInputtype_soft:global(.__wab_instance) {
+  background: #f3f4f6;
+  box-shadow: none;
+}
+.ariaInputtype_soft[data-hovered]:global(.__wab_instance) {
+  background: #e5e7eb;
+}
+.ariaInputtype_plain:global(.__wab_instance) {
+  box-shadow: none;
+  font-weight: 600;
+}
+.ariaInputtype_plain[data-hovered]:global(.__wab_instance) {
+  background: #f3f4f6;
+}
+.ariaInputflat_top:global(.__wab_instance) {
+  border-top-left-radius: 0rem;
+  border-top-right-radius: 0rem;
+}
+.ariaInputflat_right:global(.__wab_instance) {
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.ariaInputflat_bottom:global(.__wab_instance) {
+  border-bottom-left-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+.ariaInputflat_left:global(.__wab_instance) {
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+.ariaInputpadded_left:global(.__wab_instance) {
+  padding-left: var(--token-3cdm7Tr82ARy);
+}
+.ariaInputpadded_right:global(.__wab_instance) {
+  padding-right: var(--token-3cdm7Tr82ARy);
+}
+.ariaInputproperty:global(.__wab_instance) {
+  background: none;
+  font-size: 12px;
+  padding: 0px;
+  border-width: 0px;
+}

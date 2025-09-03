@@ -1,0 +1,105 @@
+.root {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 2px;
+  position: relative;
+  min-width: 0;
+}
+.root:hover {
+  background: none;
+}
+.freeBox__wzL2 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: stretch;
+  row-gap: 4px;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  min-width: 0;
+  padding: 4px;
+}
+.freeBox___5CIjy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 2px;
+  min-width: 0;
+}
+.freeBox__nJe6 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  column-gap: 8px;
+  min-width: 0;
+}
+.svg__m00Lc {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  width: 12px;
+  flex-shrink: 0;
+  height: 1em;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: var(--token-_gN_3-Mx800z);
+  font-size: 12px;
+  min-width: 0;
+}
+.popUpAddWidget:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 100ms;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 100ms;
+}
+.root:hover .popUpAddWidget:global(.__wab_instance):global(.__wab_instance) {
+  opacity: 1;
+}
+.freeBox__ulHm0 {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  max-width: 100%;
+  cursor: pointer;
+  padding: 0px;
+}
+.svg__utu71 {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+}
+.addWidgetSelection__icuUp:global(.__wab_instance) {
+  max-width: 100%;
+}
