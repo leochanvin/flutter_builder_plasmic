@@ -64,7 +64,10 @@ import TextInput from "../../TextInput"; // plasmic-import: fNeSTvGFB_H6/compone
 import SelectButton from "../../SelectButton"; // plasmic-import: DPg0ApQ_34Tf/component
 import SelectPageButton from "../../SelectPageButton"; // plasmic-import: wgw_IZFUuC2U/component
 import IconButtonSelectProperty from "../../IconButtonSelectProperty"; // plasmic-import: 1T_9MyAFtbND/component
-import PropertiesTextfield from "../../PropertiesTextfield"; // plasmic-import: iS68sQYkDEs4/component
+import PropertiesVisibilitySection from "../../PropertiesVisibilitySection"; // plasmic-import: BIrfUEblpERf/component
+import PropertiesLayoutSection from "../../PropertiesLayoutSection"; // plasmic-import: snHIp0shhUpg/component
+import PropertiesAppearanceSection from "../../PropertiesAppearanceSection"; // plasmic-import: J20s0U7K-z1T/component
+import PropertiesTextSection from "../../PropertiesTextSection"; // plasmic-import: w5E5J13JYc7t/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/styleTokensProvider
 
@@ -94,7 +97,6 @@ import DocumentCodeIcon from "./icons/PlasmicIcon__DocumentCode"; // plasmic-imp
 import PlayIcon from "./icons/PlasmicIcon__Play"; // plasmic-import: SV13G6O40jAh/icon
 import RulerPenIcon from "./icons/PlasmicIcon__RulerPen"; // plasmic-import: fH_8Hol_CL60/icon
 import FlashIcon from "./icons/PlasmicIcon__Flash"; // plasmic-import: AgZq5Wfc4mlx/icon
-import InfoCircleIcon from "./icons/PlasmicIcon__InfoCircle"; // plasmic-import: 1xGEf6lNVKha/icon
 
 createPlasmicElementProxy;
 
@@ -111,7 +113,30 @@ export type PlasmicEditorPage__OverridesType = {
   root?: Flex__<"div">;
   textInput?: Flex__<typeof TextInput>;
   selectPageButton?: Flex__<typeof SelectPageButton>;
-  propertiesTextfield?: Flex__<typeof PropertiesTextfield>;
+  frame125?: Flex__<"div">;
+  frame147?: Flex__<"div">;
+  frame82?: Flex__<"div">;
+  rectangle4?: Flex__<"div">;
+  frame154?: Flex__<"div">;
+  propertiesVisibilitySection?: Flex__<typeof PropertiesVisibilitySection>;
+  propertiesLayoutSection?: Flex__<typeof PropertiesLayoutSection>;
+  propertiesAppearanceSection?: Flex__<typeof PropertiesAppearanceSection>;
+  propertiesTextSection?: Flex__<typeof PropertiesTextSection>;
+  frame155?: Flex__<"div">;
+  frame156?: Flex__<"div">;
+  frame157?: Flex__<"div">;
+  plusMath?: Flex__<"div">;
+  rectangle12?: Flex__<"div">;
+  frame158?: Flex__<"div">;
+  frame159?: Flex__<"div">;
+  frame160?: Flex__<"div">;
+  plusMath2?: Flex__<"div">;
+  rectangle13?: Flex__<"div">;
+  frame161?: Flex__<"div">;
+  frame162?: Flex__<"div">;
+  frame163?: Flex__<"div">;
+  plusMath3?: Flex__<"div">;
+  rectangle14?: Flex__<"div">;
 };
 
 export interface DefaultEditorPageProps {}
@@ -578,32 +603,30 @@ function PlasmicEditorPage__RenderFunc(props: {
               </div>
             </div>
           </div>
-          <div className={classNames(projectcss.all, sty.freeBox__ayx)}>
-            <div className={classNames(projectcss.all, sty.freeBox__fp3RS)}>
-              <div className={classNames(projectcss.all, sty.freeBox__bQyfS)}>
-                <IconButton
-                  className={classNames(
-                    "__wab_instance",
-                    sty.iconButton__o0Pnc
-                  )}
-                  iconSelected={
-                    <DocumentCodeIcon
-                      className={classNames(projectcss.all, sty.svg__r3Mnq)}
-                      role={"img"}
-                    />
-                  }
-                  outlined={true}
-                />
-
-                <div className={classNames(projectcss.all, sty.freeBox__ioFiI)}>
+          <div
+            data-plasmic-name={"frame125"}
+            data-plasmic-override={overrides.frame125}
+            className={classNames(projectcss.all, sty.frame125)}
+          >
+            <div
+              data-plasmic-name={"frame147"}
+              data-plasmic-override={overrides.frame147}
+              className={classNames(projectcss.all, sty.frame147)}
+            >
+              <div
+                data-plasmic-name={"frame82"}
+                data-plasmic-override={overrides.frame82}
+                className={classNames(projectcss.all, sty.frame82)}
+              >
+                <div className={classNames(projectcss.all, sty.freeBox__nWwqd)}>
                   <IconButton
                     className={classNames(
                       "__wab_instance",
-                      sty.iconButton___2ZXTu
+                      sty.iconButton__i18E2
                     )}
                     iconSelected={
-                      <PlayIcon
-                        className={classNames(projectcss.all, sty.svg__sqkf)}
+                      <DocumentCodeIcon
+                        className={classNames(projectcss.all, sty.svg__i82VQ)}
                         role={"img"}
                       />
                     }
@@ -611,152 +634,291 @@ function PlasmicEditorPage__RenderFunc(props: {
                   />
 
                   <div
-                    className={classNames(projectcss.all, sty.freeBox___3Hv2R)}
+                    className={classNames(projectcss.all, sty.freeBox__bALoa)}
+                  >
+                    <IconButton
+                      className={classNames(
+                        "__wab_instance",
+                        sty.iconButton__vmCaZ
+                      )}
+                      iconSelected={
+                        <PlayIcon
+                          className={classNames(
+                            projectcss.all,
+                            sty.svg___3IK14
+                          )}
+                          role={"img"}
+                        />
+                      }
+                      outlined={true}
+                    />
+
+                    <div
+                      className={classNames(projectcss.all, sty.freeBox__i0Yf3)}
+                    >
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__g3Oon
+                        )}
+                      >
+                        {"Publish"}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={classNames(projectcss.all, sty.freeBox__wbIwq)}>
+                  <IconButtonSelectProperty
+                    className={classNames(
+                      "__wab_instance",
+                      sty.iconButtonSelectProperty___0CimE
+                    )}
+                    iconSelected={
+                      <RulerPenIcon
+                        className={classNames(projectcss.all, sty.svg__fU7I1)}
+                        role={"img"}
+                      />
+                    }
+                    onclick={async () => {
+                      const $steps = {};
+
+                      $steps["updatePropertiesTab"] = true
+                        ? (() => {
+                            const actionArgs = {
+                              variable: {
+                                objRoot: $state,
+                                variablePath: ["propertiesTab"]
+                              },
+                              operation: 0,
+                              value: "edit"
+                            };
+                            return (({
+                              variable,
+                              value,
+                              startIndex,
+                              deleteCount
+                            }) => {
+                              if (!variable) {
+                                return;
+                              }
+                              const { objRoot, variablePath } = variable;
+
+                              $stateSet(objRoot, variablePath, value);
+                              return value;
+                            })?.apply(null, [actionArgs]);
+                          })()
+                        : undefined;
+                      if (
+                        $steps["updatePropertiesTab"] != null &&
+                        typeof $steps["updatePropertiesTab"] === "object" &&
+                        typeof $steps["updatePropertiesTab"].then === "function"
+                      ) {
+                        $steps["updatePropertiesTab"] = await $steps[
+                          "updatePropertiesTab"
+                        ];
+                      }
+                    }}
+                    selected2={true}
+                  />
+
+                  <IconButtonSelectProperty
+                    className={classNames(
+                      "__wab_instance",
+                      sty.iconButtonSelectProperty__zzab5
+                    )}
+                    iconSelected={
+                      <FlashIcon
+                        className={classNames(projectcss.all, sty.svg__eyG5J)}
+                        role={"img"}
+                      />
+                    }
+                  />
+
+                  <IconButtonSelectProperty
+                    className={classNames(
+                      "__wab_instance",
+                      sty.iconButtonSelectProperty__inQs
+                    )}
+                    iconSelected={
+                      <DriverIcon
+                        className={classNames(projectcss.all, sty.svg__r9MR)}
+                        role={"img"}
+                      />
+                    }
+                  />
+
+                  <IconButtonSelectProperty
+                    className={classNames(
+                      "__wab_instance",
+                      sty.iconButtonSelectProperty__rEkxz
+                    )}
+                    iconSelected={
+                      <FolderOpenSvgIcon
+                        className={classNames(projectcss.all, sty.svg___8DmBb)}
+                        role={"img"}
+                      />
+                    }
+                  />
+                </div>
+              </div>
+              <div
+                data-plasmic-name={"rectangle4"}
+                data-plasmic-override={overrides.rectangle4}
+                className={classNames(projectcss.all, sty.rectangle4)}
+              />
+            </div>
+            <div
+              data-plasmic-name={"frame154"}
+              data-plasmic-override={overrides.frame154}
+              className={classNames(projectcss.all, sty.frame154)}
+            >
+              <PropertiesVisibilitySection
+                data-plasmic-name={"propertiesVisibilitySection"}
+                data-plasmic-override={overrides.propertiesVisibilitySection}
+                className={classNames(
+                  "__wab_instance",
+                  sty.propertiesVisibilitySection
+                )}
+              />
+
+              <PropertiesLayoutSection
+                data-plasmic-name={"propertiesLayoutSection"}
+                data-plasmic-override={overrides.propertiesLayoutSection}
+                className={classNames(
+                  "__wab_instance",
+                  sty.propertiesLayoutSection
+                )}
+              />
+
+              <PropertiesAppearanceSection
+                data-plasmic-name={"propertiesAppearanceSection"}
+                data-plasmic-override={overrides.propertiesAppearanceSection}
+                className={classNames(
+                  "__wab_instance",
+                  sty.propertiesAppearanceSection
+                )}
+              />
+
+              <PropertiesTextSection
+                data-plasmic-name={"propertiesTextSection"}
+                data-plasmic-override={overrides.propertiesTextSection}
+                className={classNames(
+                  "__wab_instance",
+                  sty.propertiesTextSection
+                )}
+              />
+
+              <div
+                data-plasmic-name={"frame155"}
+                data-plasmic-override={overrides.frame155}
+                className={classNames(projectcss.all, sty.frame155)}
+              >
+                <div
+                  data-plasmic-name={"frame156"}
+                  data-plasmic-override={overrides.frame156}
+                  className={classNames(projectcss.all, sty.frame156)}
+                >
+                  <div
+                    data-plasmic-name={"frame157"}
+                    data-plasmic-override={overrides.frame157}
+                    className={classNames(projectcss.all, sty.frame157)}
                   >
                     <div
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__c6DG
+                        sty.text__fqjbu
                       )}
                     >
-                      {"Publish"}
+                      {"Child"}
                     </div>
+                    <div
+                      data-plasmic-name={"plusMath"}
+                      data-plasmic-override={overrides.plusMath}
+                      className={classNames(projectcss.all, sty.plusMath)}
+                    />
                   </div>
                 </div>
-              </div>
-              <div className={classNames(projectcss.all, sty.freeBox__fdrpv)}>
-                <IconButtonSelectProperty
-                  className={classNames(
-                    "__wab_instance",
-                    sty.iconButtonSelectProperty__j0Xv6
-                  )}
-                  iconSelected={
-                    <RulerPenIcon
-                      className={classNames(projectcss.all, sty.svg__qRhha)}
-                      role={"img"}
-                    />
-                  }
-                  onclick={async () => {
-                    const $steps = {};
-
-                    $steps["updatePropertiesTab"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["propertiesTab"]
-                            },
-                            operation: 0,
-                            value: "edit"
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            $stateSet(objRoot, variablePath, value);
-                            return value;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updatePropertiesTab"] != null &&
-                      typeof $steps["updatePropertiesTab"] === "object" &&
-                      typeof $steps["updatePropertiesTab"].then === "function"
-                    ) {
-                      $steps["updatePropertiesTab"] = await $steps[
-                        "updatePropertiesTab"
-                      ];
-                    }
-                  }}
-                  selected2={true}
-                />
-
-                <IconButtonSelectProperty
-                  className={classNames(
-                    "__wab_instance",
-                    sty.iconButtonSelectProperty__lLjQj
-                  )}
-                  iconSelected={
-                    <FlashIcon
-                      className={classNames(projectcss.all, sty.svg__bkHn)}
-                      role={"img"}
-                    />
-                  }
-                />
-
-                <IconButtonSelectProperty
-                  className={classNames(
-                    "__wab_instance",
-                    sty.iconButtonSelectProperty__qvJb6
-                  )}
-                  iconSelected={
-                    <DriverIcon
-                      className={classNames(projectcss.all, sty.svg__hlxg6)}
-                      role={"img"}
-                    />
-                  }
-                />
-
-                <IconButtonSelectProperty
-                  className={classNames(
-                    "__wab_instance",
-                    sty.iconButtonSelectProperty__vUn9T
-                  )}
-                  iconSelected={
-                    <FolderOpenSvgIcon
-                      className={classNames(projectcss.all, sty.svg__x7Sd)}
-                      role={"img"}
-                    />
-                  }
-                />
-              </div>
-            </div>
-            <div className={classNames(projectcss.all, sty.freeBox__dkBuP)} />
-
-            <div className={classNames(projectcss.all, sty.freeBox__k9OTn)}>
-              <div className={classNames(projectcss.all, sty.freeBox__hC8U0)}>
                 <div
-                  className={classNames(
-                    projectcss.all,
-                    projectcss.__wab_text,
-                    sty.text__lIahM
-                  )}
-                >
-                  {"Appearance"}
-                </div>
-                <InfoCircleIcon
-                  className={classNames(projectcss.all, sty.svg__sbJPf)}
-                  role={"img"}
+                  data-plasmic-name={"rectangle12"}
+                  data-plasmic-override={overrides.rectangle12}
+                  className={classNames(projectcss.all, sty.rectangle12)}
                 />
               </div>
-              <div className={classNames(projectcss.all, sty.freeBox__kPt4I)}>
-                <div className={classNames(projectcss.all, sty.freeBox___2B0V)}>
+              <div
+                data-plasmic-name={"frame158"}
+                data-plasmic-override={overrides.frame158}
+                className={classNames(projectcss.all, sty.frame158)}
+              >
+                <div
+                  data-plasmic-name={"frame159"}
+                  data-plasmic-override={overrides.frame159}
+                  className={classNames(projectcss.all, sty.frame159)}
+                >
                   <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__a0MIs
-                    )}
+                    data-plasmic-name={"frame160"}
+                    data-plasmic-override={overrides.frame160}
+                    className={classNames(projectcss.all, sty.frame160)}
                   >
-                    {"Opacity"}
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__iv3Xt
+                      )}
+                    >
+                      {"Animation"}
+                    </div>
+                    <div
+                      data-plasmic-name={"plusMath2"}
+                      data-plasmic-override={overrides.plusMath2}
+                      className={classNames(projectcss.all, sty.plusMath2)}
+                    />
                   </div>
-                  <PropertiesTextfield
-                    data-plasmic-name={"propertiesTextfield"}
-                    data-plasmic-override={overrides.propertiesTextfield}
-                    className={classNames(
-                      "__wab_instance",
-                      sty.propertiesTextfield
-                    )}
-                  />
                 </div>
+                <div
+                  data-plasmic-name={"rectangle13"}
+                  data-plasmic-override={overrides.rectangle13}
+                  className={classNames(projectcss.all, sty.rectangle13)}
+                />
+              </div>
+              <div
+                data-plasmic-name={"frame161"}
+                data-plasmic-override={overrides.frame161}
+                className={classNames(projectcss.all, sty.frame161)}
+              >
+                <div
+                  data-plasmic-name={"frame162"}
+                  data-plasmic-override={overrides.frame162}
+                  className={classNames(projectcss.all, sty.frame162)}
+                >
+                  <div
+                    data-plasmic-name={"frame163"}
+                    data-plasmic-override={overrides.frame163}
+                    className={classNames(projectcss.all, sty.frame163)}
+                  >
+                    <div
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.text__nSAkH
+                      )}
+                    >
+                      {"Shadow"}
+                    </div>
+                    <div
+                      data-plasmic-name={"plusMath3"}
+                      data-plasmic-override={overrides.plusMath3}
+                      className={classNames(projectcss.all, sty.plusMath3)}
+                    />
+                  </div>
+                </div>
+                <div
+                  data-plasmic-name={"rectangle14"}
+                  data-plasmic-override={overrides.rectangle14}
+                  className={classNames(projectcss.all, sty.rectangle14)}
+                />
               </div>
             </div>
           </div>
@@ -767,10 +929,107 @@ function PlasmicEditorPage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "textInput", "selectPageButton", "propertiesTextfield"],
+  root: [
+    "root",
+    "textInput",
+    "selectPageButton",
+    "frame125",
+    "frame147",
+    "frame82",
+    "rectangle4",
+    "frame154",
+    "propertiesVisibilitySection",
+    "propertiesLayoutSection",
+    "propertiesAppearanceSection",
+    "propertiesTextSection",
+    "frame155",
+    "frame156",
+    "frame157",
+    "plusMath",
+    "rectangle12",
+    "frame158",
+    "frame159",
+    "frame160",
+    "plusMath2",
+    "rectangle13",
+    "frame161",
+    "frame162",
+    "frame163",
+    "plusMath3",
+    "rectangle14"
+  ],
   textInput: ["textInput"],
   selectPageButton: ["selectPageButton"],
-  propertiesTextfield: ["propertiesTextfield"]
+  frame125: [
+    "frame125",
+    "frame147",
+    "frame82",
+    "rectangle4",
+    "frame154",
+    "propertiesVisibilitySection",
+    "propertiesLayoutSection",
+    "propertiesAppearanceSection",
+    "propertiesTextSection",
+    "frame155",
+    "frame156",
+    "frame157",
+    "plusMath",
+    "rectangle12",
+    "frame158",
+    "frame159",
+    "frame160",
+    "plusMath2",
+    "rectangle13",
+    "frame161",
+    "frame162",
+    "frame163",
+    "plusMath3",
+    "rectangle14"
+  ],
+  frame147: ["frame147", "frame82", "rectangle4"],
+  frame82: ["frame82"],
+  rectangle4: ["rectangle4"],
+  frame154: [
+    "frame154",
+    "propertiesVisibilitySection",
+    "propertiesLayoutSection",
+    "propertiesAppearanceSection",
+    "propertiesTextSection",
+    "frame155",
+    "frame156",
+    "frame157",
+    "plusMath",
+    "rectangle12",
+    "frame158",
+    "frame159",
+    "frame160",
+    "plusMath2",
+    "rectangle13",
+    "frame161",
+    "frame162",
+    "frame163",
+    "plusMath3",
+    "rectangle14"
+  ],
+  propertiesVisibilitySection: ["propertiesVisibilitySection"],
+  propertiesLayoutSection: ["propertiesLayoutSection"],
+  propertiesAppearanceSection: ["propertiesAppearanceSection"],
+  propertiesTextSection: ["propertiesTextSection"],
+  frame155: ["frame155", "frame156", "frame157", "plusMath", "rectangle12"],
+  frame156: ["frame156", "frame157", "plusMath"],
+  frame157: ["frame157", "plusMath"],
+  plusMath: ["plusMath"],
+  rectangle12: ["rectangle12"],
+  frame158: ["frame158", "frame159", "frame160", "plusMath2", "rectangle13"],
+  frame159: ["frame159", "frame160", "plusMath2"],
+  frame160: ["frame160", "plusMath2"],
+  plusMath2: ["plusMath2"],
+  rectangle13: ["rectangle13"],
+  frame161: ["frame161", "frame162", "frame163", "plusMath3", "rectangle14"],
+  frame162: ["frame162", "frame163", "plusMath3"],
+  frame163: ["frame163", "plusMath3"],
+  plusMath3: ["plusMath3"],
+  rectangle14: ["rectangle14"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -779,7 +1038,30 @@ type NodeDefaultElementType = {
   root: "div";
   textInput: typeof TextInput;
   selectPageButton: typeof SelectPageButton;
-  propertiesTextfield: typeof PropertiesTextfield;
+  frame125: "div";
+  frame147: "div";
+  frame82: "div";
+  rectangle4: "div";
+  frame154: "div";
+  propertiesVisibilitySection: typeof PropertiesVisibilitySection;
+  propertiesLayoutSection: typeof PropertiesLayoutSection;
+  propertiesAppearanceSection: typeof PropertiesAppearanceSection;
+  propertiesTextSection: typeof PropertiesTextSection;
+  frame155: "div";
+  frame156: "div";
+  frame157: "div";
+  plusMath: "div";
+  rectangle12: "div";
+  frame158: "div";
+  frame159: "div";
+  frame160: "div";
+  plusMath2: "div";
+  rectangle13: "div";
+  frame161: "div";
+  frame162: "div";
+  frame163: "div";
+  plusMath3: "div";
+  rectangle14: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -844,7 +1126,34 @@ export const PlasmicEditorPage = Object.assign(
     // Helper components rendering sub-elements
     textInput: makeNodeComponent("textInput"),
     selectPageButton: makeNodeComponent("selectPageButton"),
-    propertiesTextfield: makeNodeComponent("propertiesTextfield"),
+    frame125: makeNodeComponent("frame125"),
+    frame147: makeNodeComponent("frame147"),
+    frame82: makeNodeComponent("frame82"),
+    rectangle4: makeNodeComponent("rectangle4"),
+    frame154: makeNodeComponent("frame154"),
+    propertiesVisibilitySection: makeNodeComponent(
+      "propertiesVisibilitySection"
+    ),
+    propertiesLayoutSection: makeNodeComponent("propertiesLayoutSection"),
+    propertiesAppearanceSection: makeNodeComponent(
+      "propertiesAppearanceSection"
+    ),
+    propertiesTextSection: makeNodeComponent("propertiesTextSection"),
+    frame155: makeNodeComponent("frame155"),
+    frame156: makeNodeComponent("frame156"),
+    frame157: makeNodeComponent("frame157"),
+    plusMath: makeNodeComponent("plusMath"),
+    rectangle12: makeNodeComponent("rectangle12"),
+    frame158: makeNodeComponent("frame158"),
+    frame159: makeNodeComponent("frame159"),
+    frame160: makeNodeComponent("frame160"),
+    plusMath2: makeNodeComponent("plusMath2"),
+    rectangle13: makeNodeComponent("rectangle13"),
+    frame161: makeNodeComponent("frame161"),
+    frame162: makeNodeComponent("frame162"),
+    frame163: makeNodeComponent("frame163"),
+    plusMath3: makeNodeComponent("plusMath3"),
+    rectangle14: makeNodeComponent("rectangle14"),
 
     // Metadata about props expected for PlasmicEditorPage
     internalVariantProps: PlasmicEditorPage__VariantProps,

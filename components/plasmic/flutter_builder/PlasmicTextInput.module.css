@@ -76,3 +76,8 @@
   padding: 0px;
   border-width: 0px;
 }
+.ariaInputradius:global(.__wab_instance) {
+  font-size: 12px;
+  text-align: center;
+  padding: 0px;
+}

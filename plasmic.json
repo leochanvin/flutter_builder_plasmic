@@ -586,6 +586,58 @@
           "cssFilePath": "plasmic/flutter_builder/PlasmicLayerItem.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "BIrfUEblpERf",
+          "name": "PropertiesVisibilitySection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPropertiesVisibilitySection.tsx",
+          "importSpec": {
+            "modulePath": "PropertiesVisibilitySection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesVisibilitySection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "snHIp0shhUpg",
+          "name": "PropertiesLayoutSection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPropertiesLayoutSection.tsx",
+          "importSpec": {
+            "modulePath": "PropertiesLayoutSection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesLayoutSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "J20s0U7K-z1T",
+          "name": "PropertiesAppearanceSection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPropertiesAppearanceSection.tsx",
+          "importSpec": {
+            "modulePath": "PropertiesAppearanceSection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesAppearanceSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
+        },
+        {
+          "id": "w5E5J13JYc7t",
+          "name": "PropertiesTextSection",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicPropertiesTextSection.tsx",
+          "importSpec": {
+            "modulePath": "PropertiesTextSection.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesTextSection.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [
@@ -858,6 +910,151 @@
           "id": "0afhUop2FR1Q",
           "name": "Grid6Icon",
           "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Grid6.tsx"
+        },
+        {
+          "id": "MFsrJOsYN371",
+          "name": "FolderOpenIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__FolderOpen.tsx"
+        },
+        {
+          "id": "sXEne5pTMqPk",
+          "name": "EyeIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Eye.tsx"
+        },
+        {
+          "id": "O2on92b-bMla",
+          "name": "MaximizeIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Maximize.tsx"
+        },
+        {
+          "id": "L95fBnO8guLj",
+          "name": "Frame71Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame71.tsx"
+        },
+        {
+          "id": "VbldlGv6vp97",
+          "name": "Frame72Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame72.tsx"
+        },
+        {
+          "id": "dUwZYrAcyy3m",
+          "name": "Frame73Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame73.tsx"
+        },
+        {
+          "id": "Vrmb1IaW9kAa",
+          "name": "Maximize3Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Maximize3.tsx"
+        },
+        {
+          "id": "qgCkJkTaOlFc",
+          "name": "Frame22Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame22.tsx"
+        },
+        {
+          "id": "tPrPLGQHHtqz",
+          "name": "Frame138Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame138.tsx"
+        },
+        {
+          "id": "kWWQH2BTte2G",
+          "name": "Frame139Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame139.tsx"
+        },
+        {
+          "id": "eYIU5nicVU3k",
+          "name": "TextalignLeftIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__TextalignLeft.tsx"
+        },
+        {
+          "id": "MkX3tnDl63_o",
+          "name": "TextalignCenterIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__TextalignCenter.tsx"
+        },
+        {
+          "id": "01zPYYfgFEm2",
+          "name": "TextalignRightIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__TextalignRight.tsx"
+        },
+        {
+          "id": "xtFLfmJo71iz",
+          "name": "Frame74Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame74.tsx"
+        },
+        {
+          "id": "jkuBOT_wY2r1",
+          "name": "Frame75Icon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame75.tsx"
+        },
+        {
+          "id": "3QmHOrby9SS3",
+          "name": "Frame200SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame200Svg.tsx"
+        },
+        {
+          "id": "pd2OGcFZ-jqH",
+          "name": "Frame202SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame202Svg.tsx"
+        },
+        {
+          "id": "1i_14N6e0L84",
+          "name": "Frame203SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame203Svg.tsx"
+        },
+        {
+          "id": "bTiLHGhshMuI",
+          "name": "Frame204SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame204Svg.tsx"
+        },
+        {
+          "id": "PauwccPpJ4oC",
+          "name": "Frame205SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame205Svg.tsx"
+        },
+        {
+          "id": "zG2EMLXUU3hG",
+          "name": "DefaultExpansionSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__DefaultExpansionSvg.tsx"
+        },
+        {
+          "id": "lDxvt_LJ-tMx",
+          "name": "FlexibleSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__FlexibleSvg.tsx"
+        },
+        {
+          "id": "_Bg-60YPfpUy",
+          "name": "ExpandedSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__ExpandedSvg.tsx"
+        },
+        {
+          "id": "wHK-4Tu35c0A",
+          "name": "MinWidthHeightSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__MinWidthHeightSvg.tsx"
+        },
+        {
+          "id": "NrnmwF1XVuK9",
+          "name": "MaxWidthHeightSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__MaxWidthHeightSvg.tsx"
+        },
+        {
+          "id": "y0k2igmDYeFW",
+          "name": "MobileSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__MobileSvg.tsx"
+        },
+        {
+          "id": "iT8vlM7V2mle",
+          "name": "Frame221SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame221Svg.tsx"
+        },
+        {
+          "id": "FXXChlI1PXSV",
+          "name": "Frame222SvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__Frame222Svg.tsx"
+        },
+        {
+          "id": "pgl_3bThkRoN",
+          "name": "MonitorSvgIcon",
+          "moduleFilePath": "plasmic/flutter_builder/icons/PlasmicIcon__MonitorSvg.tsx"
         }
       ],
       "images": [
@@ -885,6 +1082,16 @@
           "id": "dNLbaiYnt9rU",
           "name": "firebase.svg",
           "filePath": "../public/plasmic/flutter_builder/images/firebaseSvg.svg"
+        },
+        {
+          "id": "kEalagfxhgkC",
+          "name": "grid-9",
+          "filePath": "../public/plasmic/flutter_builder/images/grid9.svg"
+        },
+        {
+          "id": "t__6fay4fQO_",
+          "name": "Frame 107",
+          "filePath": "../public/plasmic/flutter_builder/images/frame107.svg"
         }
       ],
       "indirect": false,

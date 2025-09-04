@@ -1,0 +1,418 @@
+.frame149 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+.frame94 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 12px 16px;
+}
+.frame95 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.text___1NWlv {
+  display: block;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(44, 44, 44, 1);
+  position: relative;
+  user-select: none;
+}
+.freeBox__zmrjX {
+  display: block;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+.infoCircle2 {
+  transform: rotate(-180deg);
+  width: 14px;
+  height: 14px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+.vuesaxOutlineInfoCircle2 {
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.svg__inM5L {
+  object-fit: cover;
+  max-width: 100%;
+  color: #9a9a9a;
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.frame96 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame105 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame97 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 4px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.text__k06Ve {
+  display: block;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(154, 154, 154, 1);
+  position: relative;
+  user-select: none;
+}
+.frame104 {
+  display: block;
+  position: relative;
+  align-self: center;
+  flex-grow: 1;
+  width: 100%;
+  left: auto;
+  top: auto;
+  flex-shrink: 1;
+  min-width: 0;
+}
+.textInput6:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  transform: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  min-width: 0;
+  min-height: 0;
+}
+.frame98 {
+  background: rgba(246, 246, 246, 1);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 8px;
+}
+.frame99 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.frame100 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  column-gap: 0px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 0px;
+  min-width: 0;
+}
+.textInput5:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  transform: none;
+}
+.svg__gSygV {
+  object-fit: cover;
+  max-width: 100%;
+  color: #9a9a9a;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.frame101 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  column-gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 10px;
+  min-width: 0;
+}
+.freeBox__zuhHn {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.svg__nhEBd {
+  object-fit: cover;
+  max-width: 100%;
+  color: #9a9a9a;
+  opacity: 0.5;
+  transform: rotate(89.99999999999999deg);
+  width: 12px;
+  height: 12px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 12px;
+  top: 0px;
+}
+.textInput2:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  transform: none;
+}
+.frame102 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
+}
+.frame103 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  column-gap: 0px;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 10px;
+  min-width: 0;
+}
+.textInput4:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  transform: none;
+}
+.freeBox__msvdp {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.svg___2PNaP {
+  object-fit: cover;
+  max-width: 100%;
+  color: #9a9a9a;
+  opacity: 0.5;
+  transform: rotate(-90deg);
+  width: 12px;
+  height: 12px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 0px;
+  top: 12px;
+}
+.frame108 {
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-grow: 1;
+  flex-direction: row;
+  column-gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 10px;
+  min-width: 0;
+}
+.freeBox__dJySy {
+  display: block;
+  position: relative;
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+.svg__mWXjt {
+  object-fit: cover;
+  max-width: 100%;
+  color: #9a9a9a;
+  opacity: 0.5;
+  transform: rotate(180deg);
+  width: 12px;
+  height: 12px;
+  display: block;
+  transform-origin: top left;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+.textInput3:global(.__wab_instance):global(.__wab_instance) {
+  max-width: 100%;
+  transform: none;
+}
+.frame109 {
+  height: auto;
+  display: flex;
+  position: relative;
+  flex-grow: 1;
+  flex-direction: column;
+  row-gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+.text__rYs2L {
+  display: block;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(154, 154, 154, 1);
+  position: relative;
+  user-select: none;
+}
+.frame110 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: auto;
+}
+.propertiesTextfield___3N29Q:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.svg__ys6A7 {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  width: 12px;
+  height: 12px;
+}
+.propertiesTextfield__w3UsF:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.rectangle7 {
+  background: rgba(42, 205, 44, 1);
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+}
+.frame114 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 4px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.text___1Q4Pu {
+  display: block;
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(154, 154, 154, 1);
+  position: relative;
+  user-select: none;
+}
+.propertiesTextfield___6BlHm:global(.__wab_instance) {
+  position: relative;
+  flex-shrink: 0;
+}
+.rectangle9 {
+  background: rgba(42, 205, 44, 1);
+  width: 20px;
+  height: 16px;
+  display: block;
+  position: relative;
+  border-radius: 4px;
+}
+.rectangle6 {
+  background: rgba(239, 239, 239, 1);
+  height: 1px;
+  display: block;
+  position: relative;
+  align-self: stretch;
+  flex-shrink: 0;
+}

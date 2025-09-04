@@ -599,37 +599,42 @@
   font-weight: 600;
   min-width: 0;
 }
-.freeBox__ayx {
+.frame125 {
+  background: rgba(255, 255, 255, 1);
+  width: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  position: absolute;
-  width: 250px;
-  height: 100%;
-  max-width: 100%;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
+  position: absolute;
   left: auto;
   top: 0;
   right: 0;
   bottom: 0;
-  background: var(--token-3kIELR5Y6vpj);
-  min-height: 0;
-  padding: 0px;
 }
-.freeBox__fp3RS {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
+.frame147 {
   height: auto;
-  max-width: 100%;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
-  align-items: center;
-  row-gap: 12px;
-  min-width: 0;
-  padding: 16px 0px 12px;
 }
-.freeBox__bQyfS {
+.frame82 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 16px;
+  padding-bottom: 12px;
+}
+.freeBox__nWwqd {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -641,17 +646,17 @@
   padding-right: 16px;
   min-width: 0;
 }
-.iconButton__o0Pnc:global(.__wab_instance) {
+.iconButton__i18E2:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
 }
-.svg__r3Mnq {
+.svg__i82VQ {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-_gN_3-Mx800z);
   height: 20px;
 }
-.freeBox__ioFiI {
+.freeBox__bALoa {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -662,17 +667,17 @@
   max-width: 100%;
   column-gap: 8px;
 }
-.iconButton___2ZXTu:global(.__wab_instance) {
+.iconButton__vmCaZ:global(.__wab_instance) {
   max-width: 100%;
   flex-shrink: 0;
 }
-.svg__sqkf {
+.svg___3IK14 {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-_gN_3-Mx800z);
   height: 20px;
 }
-.freeBox___3Hv2R {
+.freeBox__i0Yf3 {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -687,7 +692,7 @@
   min-width: 0;
   border-radius: 10px;
 }
-.text__c6DG {
+.text__g3Oon {
   position: relative;
   width: 100%;
   height: auto;
@@ -698,7 +703,7 @@
   font-weight: 500;
   min-width: 0;
 }
-.freeBox__fdrpv {
+.freeBox__wbIwq {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -712,139 +717,245 @@
   column-gap: 10px;
   min-width: 0;
 }
-.iconButtonSelectProperty__j0Xv6:global(.__wab_instance) {
+.iconButtonSelectProperty___0CimE:global(.__wab_instance) {
   position: relative;
 }
-.svg__qRhha {
+.svg__fU7I1 {
   object-fit: cover;
   max-width: 100%;
   width: 18px;
   height: 18px;
   color: var(--token-_gN_3-Mx800z);
 }
-.iconButtonSelectProperty__lLjQj:global(.__wab_instance) {
+.iconButtonSelectProperty__zzab5:global(.__wab_instance) {
   position: relative;
 }
-.svg__bkHn {
+.svg__eyG5J {
   object-fit: cover;
   max-width: 100%;
   width: 18px;
   height: 18px;
   color: var(--token-_gN_3-Mx800z);
 }
-.iconButtonSelectProperty__qvJb6:global(.__wab_instance) {
+.iconButtonSelectProperty__inQs:global(.__wab_instance) {
   position: relative;
 }
-.svg__hlxg6 {
+.svg__r9MR {
   object-fit: cover;
   max-width: 100%;
   width: 18px;
   height: 18px;
   color: var(--token-_gN_3-Mx800z);
 }
-.iconButtonSelectProperty__vUn9T:global(.__wab_instance) {
+.iconButtonSelectProperty__rEkxz:global(.__wab_instance) {
   position: relative;
 }
-.svg__x7Sd {
+.svg___8DmBb {
   object-fit: cover;
   max-width: 100%;
   width: 18px;
   height: 18px;
   color: var(--token-_gN_3-Mx800z);
 }
-.freeBox__dkBuP {
+.rectangle4 {
+  background: rgba(239, 239, 239, 1);
+  height: 1px;
   display: block;
   position: relative;
-  width: 100%;
-  height: 1px;
-  max-width: 100%;
-  left: auto;
-  top: auto;
-  align-self: auto;
-  background: var(--token-_T1kn2IVN5gM);
+  align-self: stretch;
   flex-shrink: 0;
-  min-width: 0;
-  padding: 0px;
 }
-.freeBox__k9OTn {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
+.frame154 {
   height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  row-gap: 12px;
-  min-width: 0;
-  padding: 12px 16px;
-}
-.freeBox__hC8U0 {
   display: flex;
-  flex-direction: row;
   position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: auto;
+}
+.propertiesVisibilitySection:global(.__wab_instance) {
+  position: relative;
+  align-self: stretch;
+}
+.propertiesLayoutSection:global(.__wab_instance) {
+  position: relative;
+  align-self: stretch;
+}
+.propertiesAppearanceSection:global(.__wab_instance) {
+  position: relative;
+  align-self: stretch;
+}
+.propertiesTextSection:global(.__wab_instance) {
+  position: relative;
+  align-self: stretch;
+}
+.frame155 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame156 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+}
+.frame157 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  column-gap: 12px;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 0;
-  padding: 0px;
 }
-.text__lIahM {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  font-family: "Poppins", sans-serif;
-  color: var(--token-_gN_3-Mx800z);
-  font-weight: 500;
+.text__fqjbu {
+  display: block;
   font-size: 12px;
-  min-width: 0;
-}
-.svg__sbJPf {
-  object-fit: cover;
-  max-width: 100%;
-  width: 14px;
-  color: var(--token-g6mJoCRJ7bYs);
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(180deg);
-  flex-shrink: 0;
-  height: 1em;
-}
-.freeBox__kPt4I {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  row-gap: 8px;
-  min-width: 0;
-}
-.freeBox___2B0V {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
-  row-gap: 4px;
-  min-width: 0;
-}
-.text__a0MIs {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  color: var(--token-g6mJoCRJ7bYs);
-  font-size: 10px;
   font-family: "Poppins", sans-serif;
-  min-width: 0;
-}
-.propertiesTextfield:global(.__wab_instance) {
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(44, 44, 44, 1);
   position: relative;
+}
+.plusMath {
+  background: url("/plasmic/flutter_builder/images/plusMath.png") center center / contain no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.rectangle12 {
+  background: rgba(239, 239, 239, 1);
+  height: 1px;
+  display: block;
+  position: relative;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.frame158 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame159 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+}
+.frame160 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.text__iv3Xt {
+  display: block;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(44, 44, 44, 1);
+  position: relative;
+}
+.plusMath2 {
+  background: url("/plasmic/flutter_builder/images/plusMath.png") center center / contain no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.rectangle13 {
+  background: rgba(239, 239, 239, 1);
+  height: 1px;
+  display: block;
+  position: relative;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+.frame161 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frame162 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: column;
+  row-gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+}
+.frame163 {
+  height: auto;
+  display: flex;
+  position: relative;
+  align-self: stretch;
+  flex-direction: row;
+  column-gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.text__nSAkH {
+  display: block;
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0em;
+  line-height: 100%;
+  color: rgba(44, 44, 44, 1);
+  position: relative;
+}
+.plusMath3 {
+  background: url("/plasmic/flutter_builder/images/plusMath.png") center center / contain no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: relative;
+  flex-shrink: 0;
+}
+.rectangle14 {
+  background: rgba(239, 239, 239, 1);
+  height: 1px;
+  display: block;
+  position: relative;
+  align-self: stretch;
   flex-shrink: 0;
 }

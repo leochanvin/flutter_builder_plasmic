@@ -76,19 +76,22 @@ export type PlasmicTextInput__VariantMembers = {
   flat: "top" | "right" | "bottom" | "left";
   padded: "left" | "right";
   property: "property";
+  radius: "radius";
 };
 export type PlasmicTextInput__VariantsArgs = {
   type?: SingleChoiceArg<"soft" | "plain">;
   flat?: MultiChoiceArg<"top" | "right" | "bottom" | "left">;
   padded?: MultiChoiceArg<"left" | "right">;
   property?: SingleBooleanChoiceArg<"property">;
+  radius?: SingleBooleanChoiceArg<"radius">;
 };
 type VariantPropType = keyof PlasmicTextInput__VariantsArgs;
 export const PlasmicTextInput__VariantProps = new Array<VariantPropType>(
   "type",
   "flat",
   "padded",
-  "property"
+  "property",
+  "radius"
 );
 
 export type PlasmicTextInput__ArgsType = {
@@ -270,6 +273,7 @@ export interface DefaultTextInputProps {
   flat?: MultiChoiceArg<"top" | "right" | "bottom" | "left">;
   padded?: MultiChoiceArg<"left" | "right">;
   property?: SingleBooleanChoiceArg<"property">;
+  radius?: SingleBooleanChoiceArg<"radius">;
   className?: string;
 }
 
@@ -347,6 +351,12 @@ function PlasmicTextInput__RenderFunc(props: {
         type: "private",
         variableType: "variant",
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.property
+      },
+      {
+        path: "radius",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.radius
       }
     ],
     [$props, $ctx, $refs]
@@ -400,6 +410,7 @@ function PlasmicTextInput__RenderFunc(props: {
           [sty.ariaInputpadded_left]: hasVariant($state, "padded", "left"),
           [sty.ariaInputpadded_right]: hasVariant($state, "padded", "right"),
           [sty.ariaInputproperty]: hasVariant($state, "property", "property"),
+          [sty.ariaInputradius]: hasVariant($state, "radius", "radius"),
           [sty.ariaInputtype_plain]: hasVariant($state, "type", "plain"),
           [sty.ariaInputtype_soft]: hasVariant($state, "type", "soft")
         }

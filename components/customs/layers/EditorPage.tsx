@@ -4,19 +4,91 @@ import * as React from "react";
 import PlasmicEditorPage from "../../plasmic/flutter_builder/PlasmicEditorPage";
 // LayerTree est dans le même dossier
 import LayerTree, { TreeNode } from "./LayerTree";
+import PropertiesDebugPanel from "../../PropertiesDebugPanel";
 
 const initialRoot: any = {
   uid: "abc123",
   name: "Scaffold",
   type: "Scaffold",
+  props: {
+    visibility: { opacity: 1.0, animatedOpacity: false },
+    scaffoldProps: {
+      backgroundColor: null,
+      safeArea: true,
+      hideKeyboardOnTap: false,
+      disableAndroidBackButton: false,
+      disableResizeToAvoidBottomInset: false
+    },
+    navBarProps: { showOnNavBar: false, alwaysShowOnPage: false }
+  },
   children: {
     appBar: null,
     body: {
       uid: "col-1",
       name: "Column",
       type: "Column",
+      props: {
+        visibility: {
+          conditional: false,
+          responsive: { phone: true, tablet: true, desktop: true },
+          opacity: 1.0,
+          animatedOpacity: false,
+        },
+        layout: {
+          expansion: "none",
+          flex: 1,
+          padding: { l: 0, t: 0, r: 0, b: 0 },
+          alignment: { slot: "center", x: 0, y: 0 },
+        },
+        columnProps: {
+          mainAxisSize: "min",
+          mainAxisAlignment: "start",
+          crossAxisAlignment: "center",
+          scrollable: false,
+          itemsSpacing: 8.0,
+          applySpacingToStartEnd: false,
+          startSpacing: 0.0,
+          endSpacing: 0.0,
+        },
+      },
       children: [
-        { uid: "txt-1", name: "Title", type: "Text", children: [] }
+        { 
+          uid: "txt-1", 
+          name: "Title", 
+          type: "Text", 
+          props: {
+            text: "Title",
+            visibility: {
+              conditional: false,
+              responsive: { phone: true, tablet: true, desktop: true },
+              opacity: 1.0,
+              animatedOpacity: false,
+            },
+            layout: {
+              expansion: "none",
+              flex: 1,
+              padding: { l: 0, t: 0, r: 0, b: 0 },
+              alignment: { slot: "center", x: 0, y: 0 },
+            },
+            textProps: {
+              themeTextStyle: null,
+              fontFamily: "Primary Family",
+              fontWeight: "w500",
+              fontSize: 16.0,
+              textColor: { role: "primaryText", hex: null },
+              lineHeight: null,
+              letterSpacing: null,
+              textAlign: "start",
+              maxLines: null,
+              autoSize: false,
+              selectable: false,
+              shadows: [],
+              gradient: null,
+              animateChanges: false,
+            },
+          },
+          children: [] 
+        }
       ]
     },
     floatingActionButton: null,
@@ -110,8 +182,9 @@ function mapDslPresetToInternal(preset: any): any {
   const type = preset?.type || "Unknown";
   const base = {
     uid: preset?.uid ?? Math.random().toString(36).slice(2, 9),
-    name: type,
-    type
+    name: preset?.name || type,
+    type,
+    props: preset?.props || {}
   } as any;
   if (type === "Column" || type === "Row") {
     return { ...base, children: [] };
@@ -149,9 +222,73 @@ function removeNode(root: any, targetUid: string): any {
   return root;
 }
 
+// Fonction pour récupérer un nœud par son UID
+function findNodeByUid(root: any, uid: string): any {
+  if (!root) return null;
+  if (root.uid === uid) return root;
+  
+  if (root.type === "Scaffold") {
+    const slots = root.children || {};
+    for (const key of Object.keys(slots)) {
+      const child = slots[key];
+      if (child) {
+        const found = findNodeByUid(child, uid);
+        if (found) return found;
+      }
+    }
+  }
+  
+  if (root.type === "Column" || root.type === "Row") {
+    const children = root.children || [];
+    for (const child of children) {
+      const found = findNodeByUid(child, uid);
+      if (found) return found;
+    }
+  }
+  
+  if (root.type === "Container" && root.child) {
+    return findNodeByUid(root.child, uid);
+  }
+  
+  return null;
+}
+
+// Fonction pour mettre à jour les propriétés d'un nœud
+function updateNodeProps(root: any, uid: string, newProps: any): any {
+  if (!root) return root;
+  if (root.uid === uid) return { ...root, props: { ...root.props, ...newProps } };
+  
+  if (root.type === "Scaffold") {
+    const next = { ...root.children };
+    for (const k of Object.keys(next)) {
+      if (next[k]) next[k] = updateNodeProps(next[k], uid, newProps);
+    }
+    return { ...root, children: next };
+  }
+  
+  if (root.type === "Column" || root.type === "Row") {
+    return {
+      ...root,
+      children: (root.children ?? []).map((c: any) => updateNodeProps(c, uid, newProps))
+    };
+  }
+  
+  if (root.type === "Container" && root.child) {
+    return { ...root, child: updateNodeProps(root.child, uid, newProps) };
+  }
+  
+  return root;
+}
+
 export default function EditorPage() {
   const [root, setRoot] = React.useState<any>(initialRoot);
   const [selectedUid, setSelectedUid] = React.useState<string | undefined>();
+
+  // Récupérer le widget sélectionné
+  const selectedNode = React.useMemo(() => {
+    if (!selectedUid) return null;
+    return findNodeByUid(root, selectedUid);
+  }, [root, selectedUid]);
 
   const handleSelect = React.useCallback((uid: string, _node: TreeNode) => {
     setSelectedUid(uid);
@@ -169,6 +306,11 @@ export default function EditorPage() {
       return next;
     });
     setSelectedUid(parentUid);
+  }, []);
+
+  // Gestionnaire pour mettre à jour les propriétés
+  const handleUpdateProps = React.useCallback((uid: string, newProps: any) => {
+    setRoot((prev: any) => updateNodeProps(prev, uid, newProps));
   }, []);
 
   React.useEffect(() => {
@@ -204,7 +346,52 @@ export default function EditorPage() {
             onAddWidget={handleAddWidget}
           />
         }
+        overrides={{
+          propertiesVisibilitySection: {
+            props: {
+              node: selectedNode,
+              onUpdate: (newProps: any) => selectedUid && handleUpdateProps(selectedUid, newProps)
+            }
+          },
+          propertiesLayoutSection: {
+            props: {
+              node: selectedNode,
+              onUpdate: (newProps: any) => selectedUid && handleUpdateProps(selectedUid, newProps)
+            }
+          },
+          propertiesAppearanceSection: {
+            props: {
+              node: selectedNode,
+              onUpdate: (newProps: any) => selectedUid && handleUpdateProps(selectedUid, newProps)
+            }
+          },
+          propertiesTextSection: {
+            props: {
+              node: selectedNode,
+              onUpdate: (newProps: any) => selectedUid && handleUpdateProps(selectedUid, newProps)
+            }
+          }
+        }}
       />
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "80vw",
+          maxHeight: "300px",
+          background: "rgba(255,255,255,0.98)",
+          border: "1px solid rgba(0,0,0,0.08)",
+          borderRadius: 12,
+          boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+          zIndex: 1000,
+          overflow: "auto"
+        }}
+      >
+        <PropertiesDebugPanel node={selectedNode} />
+      </div>
+      
       <div
         style={{
           position: "fixed",

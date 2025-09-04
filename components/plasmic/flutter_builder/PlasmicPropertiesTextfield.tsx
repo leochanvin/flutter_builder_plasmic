@@ -79,16 +79,23 @@ type VariantPropType = keyof PlasmicPropertiesTextfield__VariantsArgs;
 export const PlasmicPropertiesTextfield__VariantProps =
   new Array<VariantPropType>();
 
-export type PlasmicPropertiesTextfield__ArgsType = {};
+export type PlasmicPropertiesTextfield__ArgsType = {
+  children?: React.ReactNode;
+};
 type ArgPropType = keyof PlasmicPropertiesTextfield__ArgsType;
-export const PlasmicPropertiesTextfield__ArgProps = new Array<ArgPropType>();
+export const PlasmicPropertiesTextfield__ArgProps = new Array<ArgPropType>(
+  "children"
+);
 
 export type PlasmicPropertiesTextfield__OverridesType = {
   root?: Flex__<"div">;
+  freeBox?: Flex__<"div">;
   textInput2?: Flex__<typeof TextInput>;
+  svg?: Flex__<"svg">;
 };
 
 export interface DefaultPropertiesTextfieldProps {
+  children?: React.ReactNode;
   className?: string;
 }
 
@@ -166,11 +173,22 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
         sty.root
       )}
     >
-      <Frame64Icon
-        className={classNames(projectcss.all, sty.svg__pQris)}
-        role={"img"}
-      />
+      <div
+        data-plasmic-name={"freeBox"}
+        data-plasmic-override={overrides.freeBox}
+        className={classNames(projectcss.all, sty.freeBox)}
+      >
+        {renderPlasmicSlot({
+          defaultContents: (
+            <Frame64Icon
+              className={classNames(projectcss.all, sty.svg__vezhU)}
+              role={"img"}
+            />
+          ),
 
+          value: args.children
+        })}
+      </div>
       <TextInput
         data-plasmic-name={"textInput2"}
         data-plasmic-override={overrides.textInput2}
@@ -190,13 +208,15 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
             return;
           }
         }}
-        placeholder={"-"}
+        placeholder={"0"}
         property={true}
         value={generateStateValueProp($state, ["textInput2", "value"])}
       />
 
       <Setting4Icon
-        className={classNames(projectcss.all, sty.svg__dfHtY)}
+        data-plasmic-name={"svg"}
+        data-plasmic-override={overrides.svg}
+        className={classNames(projectcss.all, sty.svg)}
         role={"img"}
       />
     </div>
@@ -204,15 +224,19 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "textInput2"],
-  textInput2: ["textInput2"]
+  root: ["root", "freeBox", "textInput2", "svg"],
+  freeBox: ["freeBox"],
+  textInput2: ["textInput2"],
+  svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  freeBox: "div";
   textInput2: typeof TextInput;
+  svg: "svg";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -275,7 +299,9 @@ export const PlasmicPropertiesTextfield = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    freeBox: makeNodeComponent("freeBox"),
     textInput2: makeNodeComponent("textInput2"),
+    svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicPropertiesTextfield
     internalVariantProps: PlasmicPropertiesTextfield__VariantProps,
