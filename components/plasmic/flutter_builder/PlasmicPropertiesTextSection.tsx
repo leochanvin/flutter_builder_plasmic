@@ -293,6 +293,7 @@ function PlasmicPropertiesTextSection__RenderFunc(props: {
                 "__wab_instance",
                 sty.propertiesTextfield__uOYmR
               )}
+              withoutIcon={true}
             >
               <Frame74Icon
                 className={classNames(projectcss.all, sty.svg__ylvl9)}
@@ -562,6 +563,7 @@ function PlasmicPropertiesTextSection__RenderFunc(props: {
                   "__wab_instance",
                   sty.propertiesTextfield__grf8H
                 )}
+                withoutIcon={true}
               >
                 <Frame74Icon
                   className={classNames(projectcss.all, sty.svg__myYyV)}

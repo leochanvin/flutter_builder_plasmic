@@ -638,6 +638,19 @@
           "cssFilePath": "plasmic/flutter_builder/PlasmicPropertiesTextSection.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "YqzTJ0hGgXg6",
+          "name": "IconSelectionItem",
+          "type": "managed",
+          "projectId": "14Poat1Xo2MFaa35ZoCnqd",
+          "renderModuleFilePath": "plasmic/flutter_builder/PlasmicIconSelectionItem.tsx",
+          "importSpec": {
+            "modulePath": "IconSelectionItem.tsx"
+          },
+          "cssFilePath": "plasmic/flutter_builder/PlasmicIconSelectionItem.module.css",
+          "scheme": "blackbox",
+          "componentType": "component"
         }
       ],
       "icons": [

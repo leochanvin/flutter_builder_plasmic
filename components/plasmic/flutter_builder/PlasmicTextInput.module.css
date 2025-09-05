@@ -17,6 +17,7 @@
   padding: 4px 4px 4px 12px;
   border-width: 1px;
   border-style: none;
+  outline: none;
 }
 .ariaInput[data-disabled]:global(.__wab_instance) {
   cursor: not-allowed;
@@ -26,6 +27,7 @@
   border-radius: 6px;
   padding: 0px;
   border-color: #000000;
+  outline: none;
 }
 .ariaInput[data-focused]:global(.__wab_instance) {
   background: none;
@@ -33,6 +35,7 @@
   border-radius: 6px;
   padding: 0px;
   border-style: none;
+  outline: none;
 }
 .ariaInputtype_soft:global(.__wab_instance) {
   background: #f3f4f6;

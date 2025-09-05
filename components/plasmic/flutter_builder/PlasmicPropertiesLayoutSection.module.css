@@ -250,7 +250,7 @@
   color: rgba(154, 154, 154, 1);
   position: relative;
 }
-.propertiesTextfield__o5ASw:global(.__wab_instance) {
+.minWidthTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -281,7 +281,7 @@
   color: rgba(154, 154, 154, 1);
   position: relative;
 }
-.propertiesTextfield__p7D32:global(.__wab_instance) {
+.minHeightTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -362,7 +362,7 @@
   color: rgba(154, 154, 154, 1);
   position: relative;
 }
-.propertiesTextfield___5ItpQ:global(.__wab_instance) {
+.maxWidthTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -393,7 +393,7 @@
   color: rgba(154, 154, 154, 1);
   position: relative;
 }
-.propertiesTextfield__btmI:global(.__wab_instance) {
+.maxHeightTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -833,29 +833,35 @@
   justify-content: flex-start;
   flex-shrink: 0;
 }
-.svg__keQ4A {
-  object-fit: cover;
-  max-width: 100%;
-  color: var(--token-_gN_3-Mx800z);
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
+.defaultIcon:global(.__wab_instance) {
+  position: relative;
 }
-.svg___9Rr88 {
+.svg___0VgEe {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-_gN_3-Mx800z);
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
 }
-.svg__cicpq {
+.flexibleIcon:global(.__wab_instance) {
+  position: relative;
+}
+.svg__hggp7 {
   object-fit: cover;
   max-width: 100%;
   color: var(--token-_gN_3-Mx800z);
   width: 24px;
   height: 24px;
-  flex-shrink: 0;
+}
+.expandedIcon:global(.__wab_instance) {
+  position: relative;
+}
+.svg__b1EZ1 {
+  object-fit: cover;
+  max-width: 100%;
+  color: var(--token-_gN_3-Mx800z);
+  width: 24px;
+  height: 24px;
 }
 .frame92 {
   height: auto;

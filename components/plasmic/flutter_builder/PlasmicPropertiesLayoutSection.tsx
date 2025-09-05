@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import PropertiesTextfield from "../../PropertiesTextfield"; // plasmic-import: iS68sQYkDEs4/component
+import IconSelectionItem from "../../IconSelectionItem"; // plasmic-import: YqzTJ0hGgXg6/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/styleTokensProvider
 
@@ -113,13 +114,17 @@ export type PlasmicPropertiesLayoutSection__OverridesType = {
   vuesaxOutlineMaximize?: Flex__<"div">;
   frame66?: Flex__<"div">;
   frame68?: Flex__<"div">;
+  minWidthTextfield?: Flex__<typeof PropertiesTextfield>;
   frame76?: Flex__<"div">;
+  minHeightTextfield?: Flex__<typeof PropertiesTextfield>;
   frame108?: Flex__<"div">;
   maximize2?: Flex__<"div">;
   vuesaxOutlineMaximize2?: Flex__<"div">;
   frame77?: Flex__<"div">;
   frame78?: Flex__<"div">;
+  maxWidthTextfield?: Flex__<typeof PropertiesTextfield>;
   frame79?: Flex__<"div">;
+  maxHeightTextfield?: Flex__<typeof PropertiesTextfield>;
   frame109?: Flex__<"div">;
   maximize3?: Flex__<"div">;
   vuesaxOutlineMaximize3?: Flex__<"div">;
@@ -142,6 +147,9 @@ export type PlasmicPropertiesLayoutSection__OverridesType = {
   frame135?: Flex__<"div">;
   frame91?: Flex__<"div">;
   frame136?: Flex__<"div">;
+  defaultIcon?: Flex__<typeof IconSelectionItem>;
+  flexibleIcon?: Flex__<typeof IconSelectionItem>;
+  expandedIcon?: Flex__<typeof IconSelectionItem>;
   frame92?: Flex__<"div">;
   flexTextfield?: Flex__<typeof PropertiesTextfield>;
   frame142?: Flex__<"div">;
@@ -439,9 +447,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                     {"Min width"}
                   </div>
                   <PropertiesTextfield
+                    data-plasmic-name={"minWidthTextfield"}
+                    data-plasmic-override={overrides.minWidthTextfield}
                     className={classNames(
                       "__wab_instance",
-                      sty.propertiesTextfield__o5ASw
+                      sty.minWidthTextfield
                     )}
                   >
                     <MinWidthHeightSvgIcon
@@ -465,9 +475,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                     {"Min height"}
                   </div>
                   <PropertiesTextfield
+                    data-plasmic-name={"minHeightTextfield"}
+                    data-plasmic-override={overrides.minHeightTextfield}
                     className={classNames(
                       "__wab_instance",
-                      sty.propertiesTextfield__p7D32
+                      sty.minHeightTextfield
                     )}
                   >
                     <MinWidthHeightSvgIcon
@@ -522,9 +534,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                     {"Max width"}
                   </div>
                   <PropertiesTextfield
+                    data-plasmic-name={"maxWidthTextfield"}
+                    data-plasmic-override={overrides.maxWidthTextfield}
                     className={classNames(
                       "__wab_instance",
-                      sty.propertiesTextfield___5ItpQ
+                      sty.maxWidthTextfield
                     )}
                   >
                     <MaxWidthHeightSvgIcon
@@ -548,9 +562,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                     {"Max height"}
                   </div>
                   <PropertiesTextfield
+                    data-plasmic-name={"maxHeightTextfield"}
+                    data-plasmic-override={overrides.maxHeightTextfield}
                     className={classNames(
                       "__wab_instance",
-                      sty.propertiesTextfield__btmI
+                      sty.maxHeightTextfield
                     )}
                   >
                     <MaxWidthHeightSvgIcon
@@ -825,19 +841,34 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 data-plasmic-override={overrides.frame136}
                 className={classNames(projectcss.all, sty.frame136)}
               >
-                <DefaultExpansionSvgIcon
-                  className={classNames(projectcss.all, sty.svg__keQ4A)}
-                  role={"img"}
+                <IconSelectionItem
+                  data-plasmic-name={"defaultIcon"}
+                  data-plasmic-override={overrides.defaultIcon}
+                  className={classNames("__wab_instance", sty.defaultIcon)}
                 />
 
-                <FlexibleSvgIcon
-                  className={classNames(projectcss.all, sty.svg___9Rr88)}
-                  role={"img"}
+                <IconSelectionItem
+                  data-plasmic-name={"flexibleIcon"}
+                  data-plasmic-override={overrides.flexibleIcon}
+                  className={classNames("__wab_instance", sty.flexibleIcon)}
+                  icon={
+                    <FlexibleSvgIcon
+                      className={classNames(projectcss.all, sty.svg__hggp7)}
+                      role={"img"}
+                    />
+                  }
                 />
 
-                <ExpandedSvgIcon
-                  className={classNames(projectcss.all, sty.svg__cicpq)}
-                  role={"img"}
+                <IconSelectionItem
+                  data-plasmic-name={"expandedIcon"}
+                  data-plasmic-override={overrides.expandedIcon}
+                  className={classNames("__wab_instance", sty.expandedIcon)}
+                  icon={
+                    <ExpandedSvgIcon
+                      className={classNames(projectcss.all, sty.svg__b1EZ1)}
+                      role={"img"}
+                    />
+                  }
                 />
               </div>
             </div>
@@ -859,6 +890,7 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 data-plasmic-name={"flexTextfield"}
                 data-plasmic-override={overrides.flexTextfield}
                 className={classNames("__wab_instance", sty.flexTextfield)}
+                withoutIcon={true}
               >
                 <EyeIcon
                   className={classNames(projectcss.all, sty.svg__tQs08)}
@@ -917,13 +949,17 @@ const PlasmicDescendants = {
     "vuesaxOutlineMaximize",
     "frame66",
     "frame68",
+    "minWidthTextfield",
     "frame76",
+    "minHeightTextfield",
     "frame108",
     "maximize2",
     "vuesaxOutlineMaximize2",
     "frame77",
     "frame78",
+    "maxWidthTextfield",
     "frame79",
+    "maxHeightTextfield",
     "frame109",
     "maximize3",
     "vuesaxOutlineMaximize3",
@@ -946,6 +982,9 @@ const PlasmicDescendants = {
     "frame135",
     "frame91",
     "frame136",
+    "defaultIcon",
+    "flexibleIcon",
+    "expandedIcon",
     "frame92",
     "flexTextfield",
     "frame142",
@@ -968,13 +1007,17 @@ const PlasmicDescendants = {
     "vuesaxOutlineMaximize",
     "frame66",
     "frame68",
+    "minWidthTextfield",
     "frame76",
+    "minHeightTextfield",
     "frame108",
     "maximize2",
     "vuesaxOutlineMaximize2",
     "frame77",
     "frame78",
+    "maxWidthTextfield",
     "frame79",
+    "maxHeightTextfield",
     "frame109",
     "maximize3",
     "vuesaxOutlineMaximize3",
@@ -997,6 +1040,9 @@ const PlasmicDescendants = {
     "frame135",
     "frame91",
     "frame136",
+    "defaultIcon",
+    "flexibleIcon",
+    "expandedIcon",
     "frame92",
     "flexTextfield",
     "frame142",
@@ -1017,13 +1063,17 @@ const PlasmicDescendants = {
     "vuesaxOutlineMaximize",
     "frame66",
     "frame68",
+    "minWidthTextfield",
     "frame76",
+    "minHeightTextfield",
     "frame108",
     "maximize2",
     "vuesaxOutlineMaximize2",
     "frame77",
     "frame78",
+    "maxWidthTextfield",
     "frame79",
+    "maxHeightTextfield",
     "frame109",
     "maximize3",
     "vuesaxOutlineMaximize3",
@@ -1046,6 +1096,9 @@ const PlasmicDescendants = {
     "frame135",
     "frame91",
     "frame136",
+    "defaultIcon",
+    "flexibleIcon",
+    "expandedIcon",
     "frame92",
     "flexTextfield",
     "frame142",
@@ -1071,26 +1124,34 @@ const PlasmicDescendants = {
   frame66: [
     "frame66",
     "frame68",
+    "minWidthTextfield",
     "frame76",
+    "minHeightTextfield",
     "frame108",
     "maximize2",
     "vuesaxOutlineMaximize2"
   ],
-  frame68: ["frame68"],
-  frame76: ["frame76"],
+  frame68: ["frame68", "minWidthTextfield"],
+  minWidthTextfield: ["minWidthTextfield"],
+  frame76: ["frame76", "minHeightTextfield"],
+  minHeightTextfield: ["minHeightTextfield"],
   frame108: ["frame108", "maximize2", "vuesaxOutlineMaximize2"],
   maximize2: ["maximize2", "vuesaxOutlineMaximize2"],
   vuesaxOutlineMaximize2: ["vuesaxOutlineMaximize2"],
   frame77: [
     "frame77",
     "frame78",
+    "maxWidthTextfield",
     "frame79",
+    "maxHeightTextfield",
     "frame109",
     "maximize3",
     "vuesaxOutlineMaximize3"
   ],
-  frame78: ["frame78"],
-  frame79: ["frame79"],
+  frame78: ["frame78", "maxWidthTextfield"],
+  maxWidthTextfield: ["maxWidthTextfield"],
+  frame79: ["frame79", "maxHeightTextfield"],
+  maxHeightTextfield: ["maxHeightTextfield"],
   frame109: ["frame109", "maximize3", "vuesaxOutlineMaximize3"],
   maximize3: ["maximize3", "vuesaxOutlineMaximize3"],
   vuesaxOutlineMaximize3: ["vuesaxOutlineMaximize3"],
@@ -1130,9 +1191,27 @@ const PlasmicDescendants = {
   paddingTopAndBottomTextfield: ["paddingTopAndBottomTextfield"],
   frame89: ["frame89", "gapTextfield"],
   gapTextfield: ["gapTextfield"],
-  frame135: ["frame135", "frame91", "frame136", "frame92", "flexTextfield"],
-  frame91: ["frame91", "frame136"],
-  frame136: ["frame136"],
+  frame135: [
+    "frame135",
+    "frame91",
+    "frame136",
+    "defaultIcon",
+    "flexibleIcon",
+    "expandedIcon",
+    "frame92",
+    "flexTextfield"
+  ],
+  frame91: [
+    "frame91",
+    "frame136",
+    "defaultIcon",
+    "flexibleIcon",
+    "expandedIcon"
+  ],
+  frame136: ["frame136", "defaultIcon", "flexibleIcon", "expandedIcon"],
+  defaultIcon: ["defaultIcon"],
+  flexibleIcon: ["flexibleIcon"],
+  expandedIcon: ["expandedIcon"],
   frame92: ["frame92", "flexTextfield"],
   flexTextfield: ["flexTextfield"],
   frame142: ["frame142", "toggle"],
@@ -1159,13 +1238,17 @@ type NodeDefaultElementType = {
   vuesaxOutlineMaximize: "div";
   frame66: "div";
   frame68: "div";
+  minWidthTextfield: typeof PropertiesTextfield;
   frame76: "div";
+  minHeightTextfield: typeof PropertiesTextfield;
   frame108: "div";
   maximize2: "div";
   vuesaxOutlineMaximize2: "div";
   frame77: "div";
   frame78: "div";
+  maxWidthTextfield: typeof PropertiesTextfield;
   frame79: "div";
+  maxHeightTextfield: typeof PropertiesTextfield;
   frame109: "div";
   maximize3: "div";
   vuesaxOutlineMaximize3: "div";
@@ -1188,6 +1271,9 @@ type NodeDefaultElementType = {
   frame135: "div";
   frame91: "div";
   frame136: "div";
+  defaultIcon: typeof IconSelectionItem;
+  flexibleIcon: typeof IconSelectionItem;
+  expandedIcon: typeof IconSelectionItem;
   frame92: "div";
   flexTextfield: typeof PropertiesTextfield;
   frame142: "div";
@@ -1270,13 +1356,17 @@ export const PlasmicPropertiesLayoutSection = Object.assign(
     vuesaxOutlineMaximize: makeNodeComponent("vuesaxOutlineMaximize"),
     frame66: makeNodeComponent("frame66"),
     frame68: makeNodeComponent("frame68"),
+    minWidthTextfield: makeNodeComponent("minWidthTextfield"),
     frame76: makeNodeComponent("frame76"),
+    minHeightTextfield: makeNodeComponent("minHeightTextfield"),
     frame108: makeNodeComponent("frame108"),
     maximize2: makeNodeComponent("maximize2"),
     vuesaxOutlineMaximize2: makeNodeComponent("vuesaxOutlineMaximize2"),
     frame77: makeNodeComponent("frame77"),
     frame78: makeNodeComponent("frame78"),
+    maxWidthTextfield: makeNodeComponent("maxWidthTextfield"),
     frame79: makeNodeComponent("frame79"),
+    maxHeightTextfield: makeNodeComponent("maxHeightTextfield"),
     frame109: makeNodeComponent("frame109"),
     maximize3: makeNodeComponent("maximize3"),
     vuesaxOutlineMaximize3: makeNodeComponent("vuesaxOutlineMaximize3"),
@@ -1303,6 +1393,9 @@ export const PlasmicPropertiesLayoutSection = Object.assign(
     frame135: makeNodeComponent("frame135"),
     frame91: makeNodeComponent("frame91"),
     frame136: makeNodeComponent("frame136"),
+    defaultIcon: makeNodeComponent("defaultIcon"),
+    flexibleIcon: makeNodeComponent("flexibleIcon"),
+    expandedIcon: makeNodeComponent("expandedIcon"),
     frame92: makeNodeComponent("frame92"),
     flexTextfield: makeNodeComponent("flexTextfield"),
     frame142: makeNodeComponent("frame142"),

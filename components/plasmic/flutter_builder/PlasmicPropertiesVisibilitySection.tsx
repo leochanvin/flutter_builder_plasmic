@@ -60,6 +60,7 @@ import {
 } from "@plasmicapp/react-web/lib/host";
 
 import PropertiesTextfield from "../../PropertiesTextfield"; // plasmic-import: iS68sQYkDEs4/component
+import IconSelectionItem from "../../IconSelectionItem"; // plasmic-import: YqzTJ0hGgXg6/component
 import { _useGlobalVariants } from "./plasmic"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/projectModule
 import { _useStyleTokens } from "./PlasmicStyleTokensProvider"; // plasmic-import: 14Poat1Xo2MFaa35ZoCnqd/styleTokensProvider
 
@@ -93,6 +94,10 @@ export type PlasmicPropertiesVisibilitySection__OverridesType = {
   frame59?: Flex__<"div">;
   frame56?: Flex__<"div">;
   frame58?: Flex__<"div">;
+  mobile?: Flex__<typeof IconSelectionItem>;
+  tablet?: Flex__<typeof IconSelectionItem>;
+  tabletLandscape?: Flex__<typeof IconSelectionItem>;
+  desktop?: Flex__<typeof IconSelectionItem>;
   rectangle11?: Flex__<"div">;
 };
 
@@ -177,6 +182,7 @@ function PlasmicPropertiesVisibilitySection__RenderFunc(props: {
               {"Visibility"}
             </div>
             <PropertiesTextfield
+              boolean={true}
               className={classNames(
                 "__wab_instance",
                 sty.propertiesTextfield__imbNk
@@ -216,24 +222,52 @@ function PlasmicPropertiesVisibilitySection__RenderFunc(props: {
           </div>
         </div>
         <div className={classNames(projectcss.all, sty.freeBox__ykwVd)}>
-          <MobileSvgIcon
-            className={classNames(projectcss.all, sty.svg__tta90)}
-            role={"img"}
+          <IconSelectionItem
+            data-plasmic-name={"mobile"}
+            data-plasmic-override={overrides.mobile}
+            className={classNames("__wab_instance", sty.mobile)}
+            icon={
+              <MobileSvgIcon
+                className={classNames(projectcss.all, sty.svg__yRa6P)}
+                role={"img"}
+              />
+            }
           />
 
-          <Frame221SvgIcon
-            className={classNames(projectcss.all, sty.svg__x4Te2)}
-            role={"img"}
+          <IconSelectionItem
+            data-plasmic-name={"tablet"}
+            data-plasmic-override={overrides.tablet}
+            className={classNames("__wab_instance", sty.tablet)}
+            icon={
+              <Frame221SvgIcon
+                className={classNames(projectcss.all, sty.svg__uhm5U)}
+                role={"img"}
+              />
+            }
           />
 
-          <Frame222SvgIcon
-            className={classNames(projectcss.all, sty.svg___0Ntha)}
-            role={"img"}
+          <IconSelectionItem
+            data-plasmic-name={"tabletLandscape"}
+            data-plasmic-override={overrides.tabletLandscape}
+            className={classNames("__wab_instance", sty.tabletLandscape)}
+            icon={
+              <Frame222SvgIcon
+                className={classNames(projectcss.all, sty.svg___7L4V)}
+                role={"img"}
+              />
+            }
           />
 
-          <MonitorSvgIcon
-            className={classNames(projectcss.all, sty.svg__byqF)}
-            role={"img"}
+          <IconSelectionItem
+            data-plasmic-name={"desktop"}
+            data-plasmic-override={overrides.desktop}
+            className={classNames("__wab_instance", sty.desktop)}
+            icon={
+              <MonitorSvgIcon
+                className={classNames(projectcss.all, sty.svg__ncaZ1)}
+                role={"img"}
+              />
+            }
           />
         </div>
       </div>
@@ -247,10 +281,24 @@ function PlasmicPropertiesVisibilitySection__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  frame146: ["frame146", "frame59", "frame56", "frame58", "rectangle11"],
+  frame146: [
+    "frame146",
+    "frame59",
+    "frame56",
+    "frame58",
+    "mobile",
+    "tablet",
+    "tabletLandscape",
+    "desktop",
+    "rectangle11"
+  ],
   frame59: ["frame59", "frame56", "frame58"],
   frame56: ["frame56"],
   frame58: ["frame58"],
+  mobile: ["mobile"],
+  tablet: ["tablet"],
+  tabletLandscape: ["tabletLandscape"],
+  desktop: ["desktop"],
   rectangle11: ["rectangle11"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -261,6 +309,10 @@ type NodeDefaultElementType = {
   frame59: "div";
   frame56: "div";
   frame58: "div";
+  mobile: typeof IconSelectionItem;
+  tablet: typeof IconSelectionItem;
+  tabletLandscape: typeof IconSelectionItem;
+  desktop: typeof IconSelectionItem;
   rectangle11: "div";
 };
 
@@ -331,6 +383,10 @@ export const PlasmicPropertiesVisibilitySection = Object.assign(
     frame59: makeNodeComponent("frame59"),
     frame56: makeNodeComponent("frame56"),
     frame58: makeNodeComponent("frame58"),
+    mobile: makeNodeComponent("mobile"),
+    tablet: makeNodeComponent("tablet"),
+    tabletLandscape: makeNodeComponent("tabletLandscape"),
+    desktop: makeNodeComponent("desktop"),
     rectangle11: makeNodeComponent("rectangle11"),
 
     // Metadata about props expected for PlasmicPropertiesVisibilitySection

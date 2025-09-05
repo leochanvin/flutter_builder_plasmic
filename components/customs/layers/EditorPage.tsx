@@ -37,6 +37,8 @@ const initialRoot: any = {
         layout: {
           expansion: "none",
           flex: 1,
+          width: 200,
+          height: 100,
           padding: { l: 0, t: 0, r: 0, b: 0 },
           alignment: { slot: "center", x: 0, y: 0 },
         },
@@ -67,6 +69,8 @@ const initialRoot: any = {
             layout: {
               expansion: "none",
               flex: 1,
+              width: 150,
+              height: 50,
               padding: { l: 0, t: 0, r: 0, b: 0 },
               alignment: { slot: "center", x: 0, y: 0 },
             },
@@ -315,7 +319,16 @@ export default function EditorPage() {
 
   React.useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if ((e.key === "Delete" || e.key === "Backspace") && selectedUid) {
+      // Ne pas supprimer le widget si l'utilisateur tape dans un champ de texte
+      const activeElement = document.activeElement;
+      const isInputField = activeElement && (
+        activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA' ||
+        (activeElement as HTMLElement).contentEditable === 'true' ||
+        activeElement.getAttribute('role') === 'textbox'
+      );
+      
+      if ((e.key === "Delete" || e.key === "Backspace") && selectedUid && !isInputField) {
         e.preventDefault();
         setRoot((prev: any) => removeNode(prev, selectedUid));
         setSelectedUid(undefined);

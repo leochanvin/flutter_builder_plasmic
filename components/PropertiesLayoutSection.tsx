@@ -86,13 +86,151 @@ function PropertiesLayoutSection_(
     }
   };
 
+  const handleExpansionChange = (expansion: string) => {
+    if (onUpdate) {
+      onUpdate({
+        layout: { ...layout, expansion }
+      });
+    }
+  };
+
   return (
     <PlasmicPropertiesLayoutSection 
       frame148={{ ref }} 
       {...rest}
       overrides={{
-        // Vous pouvez ajouter des overrides ici pour connecter les contrôles
-        // aux gestionnaires d'événements
+        // Connecter les contrôles de largeur et hauteur
+        widthTextfield: {
+          value: layout.width?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { ...layout, width: numValue }
+              });
+            }
+          }
+        },
+        heightTextfield: {
+          value: layout.height?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { ...layout, height: numValue }
+              });
+            }
+          }
+        },
+        // Connecter les contrôles de padding
+        paddingLeftAndRightTextfield: {
+          value: layout.padding?.l?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { 
+                  ...layout, 
+                  padding: { ...layout.padding, l: numValue, r: numValue } 
+                }
+              });
+            }
+          }
+        },
+        paddingTopAndBottomTextfield: {
+          value: layout.padding?.t?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { 
+                  ...layout, 
+                  padding: { ...layout.padding, t: numValue, b: numValue } 
+                }
+              });
+            }
+          }
+        },
+        // Connecter le contrôle de flex
+        flexTextfield: {
+          value: layout.flex?.toString() || "1",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 1;
+            if (onUpdate) {
+              onUpdate({
+                layout: { ...layout, flex: numValue }
+              });
+            }
+          }
+        },
+        // Connecter les contrôles d'alignement
+        xAxisTextfield: {
+          value: layout.alignment?.x?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { 
+                  ...layout, 
+                  alignment: { ...layout.alignment, x: numValue } 
+                }
+              });
+            }
+          }
+        },
+        yAxisTextfield: {
+          value: layout.alignment?.y?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              onUpdate({
+                layout: { 
+                  ...layout, 
+                  alignment: { ...layout.alignment, y: numValue } 
+                }
+              });
+            }
+          }
+        },
+        // Connecter le contrôle de gap pour les Row/Column
+        gapTextfield: {
+          value: rowProps?.itemsSpacing?.toString() || columnProps?.itemsSpacing?.toString() || "0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 0;
+            if (onUpdate) {
+              if (rowProps) {
+                onUpdate({ rowProps: { ...rowProps, itemsSpacing: numValue } });
+              } else if (columnProps) {
+                onUpdate({ columnProps: { ...columnProps, itemsSpacing: numValue } });
+              }
+            }
+          }
+        },
+        // Connecter les contrôles d'expansion
+        defaultIcon: {
+          selected: layout.expansion === "none",
+          selectable: true,
+          onClick: () => handleExpansionChange("none"),
+          style: {
+            opacity: layout.expansion === "none" ? 1 : 0.5
+          }
+        },
+        flexibleIcon: {
+          selected: layout.expansion === "flexible",
+          selectable: true,
+          onClick: () => handleExpansionChange("flexible"),
+          style: {
+            opacity: layout.expansion === "flexible" ? 1 : 0.5
+          }
+        },
+        expandedIcon: {
+          selected: layout.expansion === "expanded",
+          selectable: true,
+          onClick: () => handleExpansionChange("expanded"),
+          style: {
+            opacity: layout.expansion === "expanded" ? 1 : 0.5
+          }
+        }
       }}
     />
   );

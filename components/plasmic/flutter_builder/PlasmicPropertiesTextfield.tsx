@@ -73,28 +73,37 @@ import Setting4Icon from "./icons/PlasmicIcon__Setting4"; // plasmic-import: ilz
 
 createPlasmicElementProxy;
 
-export type PlasmicPropertiesTextfield__VariantMembers = {};
-export type PlasmicPropertiesTextfield__VariantsArgs = {};
+export type PlasmicPropertiesTextfield__VariantMembers = {
+  withoutIcon: "withoutIcon";
+  boolean: "boolean";
+};
+export type PlasmicPropertiesTextfield__VariantsArgs = {
+  withoutIcon?: SingleBooleanChoiceArg<"withoutIcon">;
+  boolean?: SingleBooleanChoiceArg<"boolean">;
+};
 type VariantPropType = keyof PlasmicPropertiesTextfield__VariantsArgs;
 export const PlasmicPropertiesTextfield__VariantProps =
-  new Array<VariantPropType>();
+  new Array<VariantPropType>("withoutIcon", "boolean");
 
 export type PlasmicPropertiesTextfield__ArgsType = {
   children?: React.ReactNode;
   value?: string;
   onValueChangeAction?: (value: string) => void;
+  boolean2?: boolean;
 };
 type ArgPropType = keyof PlasmicPropertiesTextfield__ArgsType;
 export const PlasmicPropertiesTextfield__ArgProps = new Array<ArgPropType>(
   "children",
   "value",
-  "onValueChangeAction"
+  "onValueChangeAction",
+  "boolean2"
 );
 
 export type PlasmicPropertiesTextfield__OverridesType = {
   root?: Flex__<"div">;
   freeBox?: Flex__<"div">;
   textfieldInput?: Flex__<typeof TextInput>;
+  text?: Flex__<"div">;
   svg?: Flex__<"svg">;
 };
 
@@ -102,6 +111,9 @@ export interface DefaultPropertiesTextfieldProps {
   children?: React.ReactNode;
   value?: string;
   onValueChangeAction?: (value: string) => void;
+  boolean2?: boolean;
+  withoutIcon?: SingleBooleanChoiceArg<"withoutIcon">;
+  boolean?: SingleBooleanChoiceArg<"boolean">;
   className?: string;
 }
 
@@ -125,7 +137,9 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
   const args = React.useMemo(
     () =>
       Object.assign(
-        {},
+        {
+          boolean2: true
+        },
         Object.fromEntries(
           Object.entries(props.args).filter(([_, v]) => v !== undefined)
         )
@@ -164,6 +178,18 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
               throw e;
             }
           })()
+      },
+      {
+        path: "withoutIcon",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.withoutIcon
+      },
+      {
+        path: "boolean",
+        type: "private",
+        variableType: "variant",
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.boolean
       }
     ],
     [$props, $ctx, $refs]
@@ -189,13 +215,28 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         styleTokensClassNames,
-        sty.root
+        sty.root,
+        {
+          [sty.rootboolean]: hasVariant($state, "boolean", "boolean"),
+          [sty.rootwithoutIcon]: hasVariant(
+            $state,
+            "withoutIcon",
+            "withoutIcon"
+          )
+        }
       )}
     >
       <div
         data-plasmic-name={"freeBox"}
         data-plasmic-override={overrides.freeBox}
-        className={classNames(projectcss.all, sty.freeBox)}
+        className={classNames(projectcss.all, sty.freeBox, {
+          [sty.freeBoxboolean]: hasVariant($state, "boolean", "boolean"),
+          [sty.freeBoxwithoutIcon]: hasVariant(
+            $state,
+            "withoutIcon",
+            "withoutIcon"
+          )
+        })}
       >
         {renderPlasmicSlot({
           defaultContents: (
@@ -211,7 +252,14 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
       <TextInput
         data-plasmic-name={"textfieldInput"}
         data-plasmic-override={overrides.textfieldInput}
-        className={classNames("__wab_instance", sty.textfieldInput)}
+        className={classNames("__wab_instance", sty.textfieldInput, {
+          [sty.textfieldInputboolean]: hasVariant($state, "boolean", "boolean"),
+          [sty.textfieldInputwithoutIcon]: hasVariant(
+            $state,
+            "withoutIcon",
+            "withoutIcon"
+          )
+        })}
         inputMode={"numeric"}
         onChange={async (...eventArgs: any) => {
           generateStateOnChangeProp($state, ["textfieldInput", "value"]).apply(
@@ -271,10 +319,36 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
         value={generateStateValueProp($state, ["textfieldInput", "value"])}
       />
 
+      <div
+        data-plasmic-name={"text"}
+        data-plasmic-override={overrides.text}
+        className={classNames(projectcss.all, projectcss.__wab_text, sty.text, {
+          [sty.textboolean]: hasVariant($state, "boolean", "boolean")
+        })}
+      >
+        <React.Fragment>
+          {(() => {
+            try {
+              return $props.boolean2;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return "True";
+              }
+              throw e;
+            }
+          })()}
+        </React.Fragment>
+      </div>
       <Setting4Icon
         data-plasmic-name={"svg"}
         data-plasmic-override={overrides.svg}
-        className={classNames(projectcss.all, sty.svg)}
+        className={classNames(projectcss.all, sty.svg, {
+          [sty.svgboolean]: hasVariant($state, "boolean", "boolean"),
+          [sty.svgwithoutIcon]: hasVariant($state, "withoutIcon", "withoutIcon")
+        })}
         role={"img"}
       />
     </div>
@@ -282,9 +356,10 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "textfieldInput", "svg"],
+  root: ["root", "freeBox", "textfieldInput", "text", "svg"],
   freeBox: ["freeBox"],
   textfieldInput: ["textfieldInput"],
+  text: ["text"],
   svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -294,6 +369,7 @@ type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
   textfieldInput: typeof TextInput;
+  text: "div";
   svg: "svg";
 };
 
@@ -359,6 +435,7 @@ export const PlasmicPropertiesTextfield = Object.assign(
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
     textfieldInput: makeNodeComponent("textfieldInput"),
+    text: makeNodeComponent("text"),
     svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicPropertiesTextfield
