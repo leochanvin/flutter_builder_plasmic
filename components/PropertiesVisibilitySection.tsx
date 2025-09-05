@@ -34,7 +34,7 @@ function PropertiesVisibilitySection_(
   
   // Extraire les propriétés de visibilité du nœud
   const visibility = node?.props?.visibility || {
-    conditional: false,
+    visible: true,
     responsive: { phone: true, tablet: true, desktop: true },
     opacity: 1.0,
     animatedOpacity: false,
@@ -70,13 +70,77 @@ function PropertiesVisibilitySection_(
     }
   };
 
+  const handleVisibilityToggle = () => {
+    if (onUpdate) {
+      onUpdate({
+        visibility: { ...visibility, visible: !visibility.visible }
+      });
+    }
+  };
+
   return (
     <PlasmicPropertiesVisibilitySection 
       frame146={{ ref }} 
       {...rest}
       overrides={{
-        // Vous pouvez ajouter des overrides ici pour connecter les contrôles
-        // aux gestionnaires d'événements
+        // Connecter le champ de visibilité (toggle)
+        visibilityTextfield: {
+          value: visibility.visible ? "true" : "false",
+          onValueChangeAction: (value: string) => {
+            const boolValue = value === "true";
+            if (onUpdate) {
+              onUpdate({
+                visibility: { ...visibility, visible: boolValue }
+              });
+            }
+          },
+          onClick: handleVisibilityToggle
+        },
+        // Connecter le champ d'opacité
+        opacityTextfield: {
+          value: visibility.opacity?.toString() || "1.0",
+          onValueChangeAction: (value: string) => {
+            const numValue = parseFloat(value) || 1.0;
+            if (onUpdate) {
+              onUpdate({
+                visibility: { ...visibility, opacity: numValue }
+              });
+            }
+          }
+        },
+        // Connecter les contrôles responsive avec opacité
+        mobile: {
+          selected: visibility.responsive?.phone || false,
+          selectable: true,
+          onClick: () => handleResponsiveChange('phone', !visibility.responsive?.phone),
+          style: {
+            opacity: visibility.responsive?.phone ? 1 : 0.5
+          }
+        },
+        tablet: {
+          selected: visibility.responsive?.tablet || false,
+          selectable: true,
+          onClick: () => handleResponsiveChange('tablet', !visibility.responsive?.tablet),
+          style: {
+            opacity: visibility.responsive?.tablet ? 1 : 0.5
+          }
+        },
+        tabletLandscape: {
+          selected: visibility.responsive?.tablet || false, // Même état que tablet
+          selectable: true,
+          onClick: () => handleResponsiveChange('tablet', !visibility.responsive?.tablet),
+          style: {
+            opacity: visibility.responsive?.tablet ? 1 : 0.5
+          }
+        },
+        desktop: {
+          selected: visibility.responsive?.desktop || false,
+          selectable: true,
+          onClick: () => handleResponsiveChange('desktop', !visibility.responsive?.desktop),
+          style: {
+            opacity: visibility.responsive?.desktop ? 1 : 0.5
+          }
+        }
       }}
     />
   );

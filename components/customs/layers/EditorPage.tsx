@@ -11,7 +11,7 @@ const initialRoot: any = {
   name: "Scaffold",
   type: "Scaffold",
   props: {
-    visibility: { opacity: 1.0, animatedOpacity: false },
+    visibility: { visible: true, opacity: 1.0, animatedOpacity: false },
     scaffoldProps: {
       backgroundColor: null,
       safeArea: true,
@@ -29,7 +29,7 @@ const initialRoot: any = {
       type: "Column",
       props: {
         visibility: {
-          conditional: false,
+          visible: true,
           responsive: { phone: true, tablet: true, desktop: true },
           opacity: 1.0,
           animatedOpacity: false,
@@ -61,7 +61,7 @@ const initialRoot: any = {
           props: {
             text: "Title",
             visibility: {
-              conditional: false,
+              visible: true,
               responsive: { phone: true, tablet: true, desktop: true },
               opacity: 1.0,
               animatedOpacity: false,

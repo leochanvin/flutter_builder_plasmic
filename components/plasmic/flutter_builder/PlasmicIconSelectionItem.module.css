@@ -8,7 +8,11 @@
   max-width: 100%;
   position: relative;
   cursor: pointer;
+  transition-property: all;
+  transition-duration: 100ms;
   min-width: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 100ms;
   padding: 0px;
 }
 .svg__qDfiq {

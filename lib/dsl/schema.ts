@@ -11,7 +11,7 @@ const colorRef = z.object({
 });
 
 const visibility = z.object({
-  conditional: z.boolean().optional(),
+  visible: z.boolean(),
   responsive: z.object({
     phone: z.boolean(),
     tablet: z.boolean(),

@@ -51,7 +51,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield__imbNk:global(.__wab_instance) {
+.visibilityTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -87,7 +87,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield__xFcug:global(.__wab_instance) {
+.opacityTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }

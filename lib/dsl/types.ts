@@ -8,7 +8,7 @@ export type Slot =
 export type ColorRef = { role?: string | null; hex?: string | null; unset?: boolean };
 
 export type Visibility = {
-  conditional?: boolean;
+  visible: boolean;
   responsive?: Responsive;
   opacity: number;
   animatedOpacity: boolean;

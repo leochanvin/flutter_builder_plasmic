@@ -93,7 +93,9 @@ export type PlasmicPropertiesVisibilitySection__OverridesType = {
   frame146?: Flex__<"div">;
   frame59?: Flex__<"div">;
   frame56?: Flex__<"div">;
+  visibilityTextfield?: Flex__<typeof PropertiesTextfield>;
   frame58?: Flex__<"div">;
+  opacityTextfield?: Flex__<typeof PropertiesTextfield>;
   mobile?: Flex__<typeof IconSelectionItem>;
   tablet?: Flex__<typeof IconSelectionItem>;
   tabletLandscape?: Flex__<typeof IconSelectionItem>;
@@ -182,11 +184,10 @@ function PlasmicPropertiesVisibilitySection__RenderFunc(props: {
               {"Visibility"}
             </div>
             <PropertiesTextfield
+              data-plasmic-name={"visibilityTextfield"}
+              data-plasmic-override={overrides.visibilityTextfield}
               boolean={true}
-              className={classNames(
-                "__wab_instance",
-                sty.propertiesTextfield__imbNk
-              )}
+              className={classNames("__wab_instance", sty.visibilityTextfield)}
             >
               <EyeIcon
                 className={classNames(projectcss.all, sty.svg__euxnm)}
@@ -209,10 +210,9 @@ function PlasmicPropertiesVisibilitySection__RenderFunc(props: {
               {"Opacity"}
             </div>
             <PropertiesTextfield
-              className={classNames(
-                "__wab_instance",
-                sty.propertiesTextfield__xFcug
-              )}
+              data-plasmic-name={"opacityTextfield"}
+              data-plasmic-override={overrides.opacityTextfield}
+              className={classNames("__wab_instance", sty.opacityTextfield)}
             >
               <Frame64Icon
                 className={classNames(projectcss.all, sty.svg__lspPj)}
@@ -285,16 +285,26 @@ const PlasmicDescendants = {
     "frame146",
     "frame59",
     "frame56",
+    "visibilityTextfield",
     "frame58",
+    "opacityTextfield",
     "mobile",
     "tablet",
     "tabletLandscape",
     "desktop",
     "rectangle11"
   ],
-  frame59: ["frame59", "frame56", "frame58"],
-  frame56: ["frame56"],
-  frame58: ["frame58"],
+  frame59: [
+    "frame59",
+    "frame56",
+    "visibilityTextfield",
+    "frame58",
+    "opacityTextfield"
+  ],
+  frame56: ["frame56", "visibilityTextfield"],
+  visibilityTextfield: ["visibilityTextfield"],
+  frame58: ["frame58", "opacityTextfield"],
+  opacityTextfield: ["opacityTextfield"],
   mobile: ["mobile"],
   tablet: ["tablet"],
   tabletLandscape: ["tabletLandscape"],
@@ -308,7 +318,9 @@ type NodeDefaultElementType = {
   frame146: "div";
   frame59: "div";
   frame56: "div";
+  visibilityTextfield: typeof PropertiesTextfield;
   frame58: "div";
+  opacityTextfield: typeof PropertiesTextfield;
   mobile: typeof IconSelectionItem;
   tablet: typeof IconSelectionItem;
   tabletLandscape: typeof IconSelectionItem;
@@ -382,7 +394,9 @@ export const PlasmicPropertiesVisibilitySection = Object.assign(
     // Helper components rendering sub-elements
     frame59: makeNodeComponent("frame59"),
     frame56: makeNodeComponent("frame56"),
+    visibilityTextfield: makeNodeComponent("visibilityTextfield"),
     frame58: makeNodeComponent("frame58"),
+    opacityTextfield: makeNodeComponent("opacityTextfield"),
     mobile: makeNodeComponent("mobile"),
     tablet: makeNodeComponent("tablet"),
     tabletLandscape: makeNodeComponent("tabletLandscape"),
