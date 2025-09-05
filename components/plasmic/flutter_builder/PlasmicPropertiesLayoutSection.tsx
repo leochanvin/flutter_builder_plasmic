@@ -105,7 +105,9 @@ export type PlasmicPropertiesLayoutSection__OverridesType = {
   frame65?: Flex__<"div">;
   frame64?: Flex__<"div">;
   frame63?: Flex__<"div">;
+  widthTextfield?: Flex__<typeof PropertiesTextfield>;
   frame67?: Flex__<"div">;
+  heightTextfield?: Flex__<typeof PropertiesTextfield>;
   frame107?: Flex__<"div">;
   maximize?: Flex__<"div">;
   vuesaxOutlineMaximize?: Flex__<"div">;
@@ -129,13 +131,19 @@ export type PlasmicPropertiesLayoutSection__OverridesType = {
   frame74?: Flex__<"div">;
   frame75?: Flex__<"div">;
   frame106?: Flex__<"div">;
+  xAxisTextfield?: Flex__<typeof PropertiesTextfield>;
+  yAxisTextfield?: Flex__<typeof PropertiesTextfield>;
   frame85?: Flex__<"div">;
   frame86?: Flex__<"div">;
+  paddingLeftAndRightTextfield?: Flex__<typeof PropertiesTextfield>;
+  paddingTopAndBottomTextfield?: Flex__<typeof PropertiesTextfield>;
   frame89?: Flex__<"div">;
+  gapTextfield?: Flex__<typeof PropertiesTextfield>;
   frame135?: Flex__<"div">;
   frame91?: Flex__<"div">;
   frame136?: Flex__<"div">;
   frame92?: Flex__<"div">;
+  flexTextfield?: Flex__<typeof PropertiesTextfield>;
   frame142?: Flex__<"div">;
   toggle?: Flex__<"div">;
   rectangle5?: Flex__<"div">;
@@ -285,10 +293,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 {"Width"}
               </div>
               <PropertiesTextfield
-                className={classNames(
-                  "__wab_instance",
-                  sty.propertiesTextfield__ak2X3
-                )}
+                data-plasmic-name={"widthTextfield"}
+                data-plasmic-override={overrides.widthTextfield}
+                className={classNames("__wab_instance", sty.widthTextfield)}
               >
                 <div
                   className={classNames(
@@ -316,10 +323,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 {"Height"}
               </div>
               <PropertiesTextfield
-                className={classNames(
-                  "__wab_instance",
-                  sty.propertiesTextfield__tH96E
-                )}
+                data-plasmic-name={"heightTextfield"}
+                data-plasmic-override={overrides.heightTextfield}
+                className={classNames("__wab_instance", sty.heightTextfield)}
               >
                 <div
                   className={classNames(
@@ -687,10 +693,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 className={classNames(projectcss.all, sty.frame106)}
               >
                 <PropertiesTextfield
-                  className={classNames(
-                    "__wab_instance",
-                    sty.propertiesTextfield__t2Cfc
-                  )}
+                  data-plasmic-name={"xAxisTextfield"}
+                  data-plasmic-override={overrides.xAxisTextfield}
+                  className={classNames("__wab_instance", sty.xAxisTextfield)}
                 >
                   <div
                     className={classNames(
@@ -703,10 +708,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                   </div>
                 </PropertiesTextfield>
                 <PropertiesTextfield
-                  className={classNames(
-                    "__wab_instance",
-                    sty.propertiesTextfield__zQr2L
-                  )}
+                  data-plasmic-name={"yAxisTextfield"}
+                  data-plasmic-override={overrides.yAxisTextfield}
+                  className={classNames("__wab_instance", sty.yAxisTextfield)}
                 >
                   <div
                     className={classNames(
@@ -715,7 +719,7 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                       sty.text__ycVrJ
                     )}
                   >
-                    {"H"}
+                    {"Y"}
                   </div>
                 </PropertiesTextfield>
               </div>
@@ -741,9 +745,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
               className={classNames(projectcss.all, sty.frame86)}
             >
               <PropertiesTextfield
+                data-plasmic-name={"paddingLeftAndRightTextfield"}
+                data-plasmic-override={overrides.paddingLeftAndRightTextfield}
                 className={classNames(
                   "__wab_instance",
-                  sty.propertiesTextfield___73UC9
+                  sty.paddingLeftAndRightTextfield
                 )}
               >
                 <Frame200SvgIcon
@@ -752,9 +758,11 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 />
               </PropertiesTextfield>
               <PropertiesTextfield
+                data-plasmic-name={"paddingTopAndBottomTextfield"}
+                data-plasmic-override={overrides.paddingTopAndBottomTextfield}
                 className={classNames(
                   "__wab_instance",
-                  sty.propertiesTextfield__kWsP
+                  sty.paddingTopAndBottomTextfield
                 )}
               >
                 <Frame70Icon
@@ -783,10 +791,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
               {"Gap"}
             </div>
             <PropertiesTextfield
-              className={classNames(
-                "__wab_instance",
-                sty.propertiesTextfield___6UT2L
-              )}
+              data-plasmic-name={"gapTextfield"}
+              data-plasmic-override={overrides.gapTextfield}
+              className={classNames("__wab_instance", sty.gapTextfield)}
             >
               <Frame67Icon
                 className={classNames(projectcss.all, sty.svg__fzcmc)}
@@ -849,10 +856,9 @@ function PlasmicPropertiesLayoutSection__RenderFunc(props: {
                 {"Flex"}
               </div>
               <PropertiesTextfield
-                className={classNames(
-                  "__wab_instance",
-                  sty.propertiesTextfield___7RgIt
-                )}
+                data-plasmic-name={"flexTextfield"}
+                data-plasmic-override={overrides.flexTextfield}
+                className={classNames("__wab_instance", sty.flexTextfield)}
               >
                 <EyeIcon
                   className={classNames(projectcss.all, sty.svg__tQs08)}
@@ -903,7 +909,9 @@ const PlasmicDescendants = {
     "frame65",
     "frame64",
     "frame63",
+    "widthTextfield",
     "frame67",
+    "heightTextfield",
     "frame107",
     "maximize",
     "vuesaxOutlineMaximize",
@@ -927,13 +935,19 @@ const PlasmicDescendants = {
     "frame74",
     "frame75",
     "frame106",
+    "xAxisTextfield",
+    "yAxisTextfield",
     "frame85",
     "frame86",
+    "paddingLeftAndRightTextfield",
+    "paddingTopAndBottomTextfield",
     "frame89",
+    "gapTextfield",
     "frame135",
     "frame91",
     "frame136",
     "frame92",
+    "flexTextfield",
     "frame142",
     "toggle",
     "rectangle5"
@@ -946,7 +960,9 @@ const PlasmicDescendants = {
     "frame65",
     "frame64",
     "frame63",
+    "widthTextfield",
     "frame67",
+    "heightTextfield",
     "frame107",
     "maximize",
     "vuesaxOutlineMaximize",
@@ -970,13 +986,19 @@ const PlasmicDescendants = {
     "frame74",
     "frame75",
     "frame106",
+    "xAxisTextfield",
+    "yAxisTextfield",
     "frame85",
     "frame86",
+    "paddingLeftAndRightTextfield",
+    "paddingTopAndBottomTextfield",
     "frame89",
+    "gapTextfield",
     "frame135",
     "frame91",
     "frame136",
     "frame92",
+    "flexTextfield",
     "frame142",
     "toggle"
   ],
@@ -987,7 +1009,9 @@ const PlasmicDescendants = {
     "frame65",
     "frame64",
     "frame63",
+    "widthTextfield",
     "frame67",
+    "heightTextfield",
     "frame107",
     "maximize",
     "vuesaxOutlineMaximize",
@@ -1011,26 +1035,36 @@ const PlasmicDescendants = {
     "frame74",
     "frame75",
     "frame106",
+    "xAxisTextfield",
+    "yAxisTextfield",
     "frame85",
     "frame86",
+    "paddingLeftAndRightTextfield",
+    "paddingTopAndBottomTextfield",
     "frame89",
+    "gapTextfield",
     "frame135",
     "frame91",
     "frame136",
     "frame92",
+    "flexTextfield",
     "frame142",
     "toggle"
   ],
   frame64: [
     "frame64",
     "frame63",
+    "widthTextfield",
     "frame67",
+    "heightTextfield",
     "frame107",
     "maximize",
     "vuesaxOutlineMaximize"
   ],
-  frame63: ["frame63"],
-  frame67: ["frame67"],
+  frame63: ["frame63", "widthTextfield"],
+  widthTextfield: ["widthTextfield"],
+  frame67: ["frame67", "heightTextfield"],
+  heightTextfield: ["heightTextfield"],
   frame107: ["frame107", "maximize", "vuesaxOutlineMaximize"],
   maximize: ["maximize", "vuesaxOutlineMaximize"],
   vuesaxOutlineMaximize: ["vuesaxOutlineMaximize"],
@@ -1068,22 +1102,39 @@ const PlasmicDescendants = {
     "frame73",
     "frame74",
     "frame75",
-    "frame106"
+    "frame106",
+    "xAxisTextfield",
+    "yAxisTextfield"
   ],
   frame70: ["frame70", "frame72", "frame71", "frame73", "frame74"],
   frame72: ["frame72", "frame71", "frame73", "frame74"],
   frame71: ["frame71"],
   frame73: ["frame73"],
   frame74: ["frame74"],
-  frame75: ["frame75", "frame106"],
-  frame106: ["frame106"],
-  frame85: ["frame85", "frame86"],
-  frame86: ["frame86"],
-  frame89: ["frame89"],
-  frame135: ["frame135", "frame91", "frame136", "frame92"],
+  frame75: ["frame75", "frame106", "xAxisTextfield", "yAxisTextfield"],
+  frame106: ["frame106", "xAxisTextfield", "yAxisTextfield"],
+  xAxisTextfield: ["xAxisTextfield"],
+  yAxisTextfield: ["yAxisTextfield"],
+  frame85: [
+    "frame85",
+    "frame86",
+    "paddingLeftAndRightTextfield",
+    "paddingTopAndBottomTextfield"
+  ],
+  frame86: [
+    "frame86",
+    "paddingLeftAndRightTextfield",
+    "paddingTopAndBottomTextfield"
+  ],
+  paddingLeftAndRightTextfield: ["paddingLeftAndRightTextfield"],
+  paddingTopAndBottomTextfield: ["paddingTopAndBottomTextfield"],
+  frame89: ["frame89", "gapTextfield"],
+  gapTextfield: ["gapTextfield"],
+  frame135: ["frame135", "frame91", "frame136", "frame92", "flexTextfield"],
   frame91: ["frame91", "frame136"],
   frame136: ["frame136"],
-  frame92: ["frame92"],
+  frame92: ["frame92", "flexTextfield"],
+  flexTextfield: ["flexTextfield"],
   frame142: ["frame142", "toggle"],
   toggle: ["toggle"],
   rectangle5: ["rectangle5"]
@@ -1100,7 +1151,9 @@ type NodeDefaultElementType = {
   frame65: "div";
   frame64: "div";
   frame63: "div";
+  widthTextfield: typeof PropertiesTextfield;
   frame67: "div";
+  heightTextfield: typeof PropertiesTextfield;
   frame107: "div";
   maximize: "div";
   vuesaxOutlineMaximize: "div";
@@ -1124,13 +1177,19 @@ type NodeDefaultElementType = {
   frame74: "div";
   frame75: "div";
   frame106: "div";
+  xAxisTextfield: typeof PropertiesTextfield;
+  yAxisTextfield: typeof PropertiesTextfield;
   frame85: "div";
   frame86: "div";
+  paddingLeftAndRightTextfield: typeof PropertiesTextfield;
+  paddingTopAndBottomTextfield: typeof PropertiesTextfield;
   frame89: "div";
+  gapTextfield: typeof PropertiesTextfield;
   frame135: "div";
   frame91: "div";
   frame136: "div";
   frame92: "div";
+  flexTextfield: typeof PropertiesTextfield;
   frame142: "div";
   toggle: "div";
   rectangle5: "div";
@@ -1203,7 +1262,9 @@ export const PlasmicPropertiesLayoutSection = Object.assign(
     frame65: makeNodeComponent("frame65"),
     frame64: makeNodeComponent("frame64"),
     frame63: makeNodeComponent("frame63"),
+    widthTextfield: makeNodeComponent("widthTextfield"),
     frame67: makeNodeComponent("frame67"),
+    heightTextfield: makeNodeComponent("heightTextfield"),
     frame107: makeNodeComponent("frame107"),
     maximize: makeNodeComponent("maximize"),
     vuesaxOutlineMaximize: makeNodeComponent("vuesaxOutlineMaximize"),
@@ -1227,13 +1288,23 @@ export const PlasmicPropertiesLayoutSection = Object.assign(
     frame74: makeNodeComponent("frame74"),
     frame75: makeNodeComponent("frame75"),
     frame106: makeNodeComponent("frame106"),
+    xAxisTextfield: makeNodeComponent("xAxisTextfield"),
+    yAxisTextfield: makeNodeComponent("yAxisTextfield"),
     frame85: makeNodeComponent("frame85"),
     frame86: makeNodeComponent("frame86"),
+    paddingLeftAndRightTextfield: makeNodeComponent(
+      "paddingLeftAndRightTextfield"
+    ),
+    paddingTopAndBottomTextfield: makeNodeComponent(
+      "paddingTopAndBottomTextfield"
+    ),
     frame89: makeNodeComponent("frame89"),
+    gapTextfield: makeNodeComponent("gapTextfield"),
     frame135: makeNodeComponent("frame135"),
     frame91: makeNodeComponent("frame91"),
     frame136: makeNodeComponent("frame136"),
     frame92: makeNodeComponent("frame92"),
+    flexTextfield: makeNodeComponent("flexTextfield"),
     frame142: makeNodeComponent("frame142"),
     toggle: makeNodeComponent("toggle"),
     rectangle5: makeNodeComponent("rectangle5"),

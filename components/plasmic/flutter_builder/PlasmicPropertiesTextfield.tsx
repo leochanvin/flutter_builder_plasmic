@@ -81,21 +81,27 @@ export const PlasmicPropertiesTextfield__VariantProps =
 
 export type PlasmicPropertiesTextfield__ArgsType = {
   children?: React.ReactNode;
+  value?: string;
+  onValueChangeAction?: (value: string) => void;
 };
 type ArgPropType = keyof PlasmicPropertiesTextfield__ArgsType;
 export const PlasmicPropertiesTextfield__ArgProps = new Array<ArgPropType>(
-  "children"
+  "children",
+  "value",
+  "onValueChangeAction"
 );
 
 export type PlasmicPropertiesTextfield__OverridesType = {
   root?: Flex__<"div">;
   freeBox?: Flex__<"div">;
-  textInput2?: Flex__<typeof TextInput>;
+  textfieldInput?: Flex__<typeof TextInput>;
   svg?: Flex__<"svg">;
 };
 
 export interface DefaultPropertiesTextfieldProps {
   children?: React.ReactNode;
+  value?: string;
+  onValueChangeAction?: (value: string) => void;
   className?: string;
 }
 
@@ -141,10 +147,23 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
   const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
     () => [
       {
-        path: "textInput2.value",
+        path: "textfieldInput.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return $props.value;
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })()
       }
     ],
     [$props, $ctx, $refs]
@@ -190,12 +209,12 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
         })}
       </div>
       <TextInput
-        data-plasmic-name={"textInput2"}
-        data-plasmic-override={overrides.textInput2}
-        className={classNames("__wab_instance", sty.textInput2)}
+        data-plasmic-name={"textfieldInput"}
+        data-plasmic-override={overrides.textfieldInput}
+        className={classNames("__wab_instance", sty.textfieldInput)}
         inputMode={"numeric"}
         onChange={async (...eventArgs: any) => {
-          generateStateOnChangeProp($state, ["textInput2", "value"]).apply(
+          generateStateOnChangeProp($state, ["textfieldInput", "value"]).apply(
             null,
             eventArgs
           );
@@ -207,10 +226,49 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
           ) {
             return;
           }
+
+          (async val => {
+            const $steps = {};
+
+            $steps["runOnValueChangeAction"] = true
+              ? (() => {
+                  const actionArgs = {
+                    eventRef: $props["onValueChangeAction"],
+                    args: [
+                      (() => {
+                        try {
+                          return $state.textfieldInput.value;
+                        } catch (e) {
+                          if (
+                            e instanceof TypeError ||
+                            e?.plasmicType === "PlasmicUndefinedDataError"
+                          ) {
+                            return undefined;
+                          }
+                          throw e;
+                        }
+                      })()
+                    ]
+                  };
+                  return (({ eventRef, args }) => {
+                    return eventRef?.(...(args ?? []));
+                  })?.apply(null, [actionArgs]);
+                })()
+              : undefined;
+            if (
+              $steps["runOnValueChangeAction"] != null &&
+              typeof $steps["runOnValueChangeAction"] === "object" &&
+              typeof $steps["runOnValueChangeAction"].then === "function"
+            ) {
+              $steps["runOnValueChangeAction"] = await $steps[
+                "runOnValueChangeAction"
+              ];
+            }
+          }).apply(null, eventArgs);
         }}
         placeholder={"0"}
         property={true}
-        value={generateStateValueProp($state, ["textInput2", "value"])}
+        value={generateStateValueProp($state, ["textfieldInput", "value"])}
       />
 
       <Setting4Icon
@@ -224,9 +282,9 @@ function PlasmicPropertiesTextfield__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "freeBox", "textInput2", "svg"],
+  root: ["root", "freeBox", "textfieldInput", "svg"],
   freeBox: ["freeBox"],
-  textInput2: ["textInput2"],
+  textfieldInput: ["textfieldInput"],
   svg: ["svg"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
@@ -235,7 +293,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   freeBox: "div";
-  textInput2: typeof TextInput;
+  textfieldInput: typeof TextInput;
   svg: "svg";
 };
 
@@ -300,7 +358,7 @@ export const PlasmicPropertiesTextfield = Object.assign(
   {
     // Helper components rendering sub-elements
     freeBox: makeNodeComponent("freeBox"),
-    textInput2: makeNodeComponent("textInput2"),
+    textfieldInput: makeNodeComponent("textfieldInput"),
     svg: makeNodeComponent("svg"),
 
     // Metadata about props expected for PlasmicPropertiesTextfield

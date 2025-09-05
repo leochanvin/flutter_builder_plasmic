@@ -116,7 +116,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield__ak2X3:global(.__wab_instance) {
+.widthTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -153,7 +153,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield__tH96E:global(.__wab_instance) {
+.heightTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -662,7 +662,7 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
-.propertiesTextfield__t2Cfc:global(.__wab_instance) {
+.xAxisTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -678,7 +678,7 @@
   text-align: center;
   min-width: 0;
 }
-.propertiesTextfield__zQr2L:global(.__wab_instance) {
+.yAxisTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -725,7 +725,7 @@
   align-items: center;
   justify-content: flex-start;
 }
-.propertiesTextfield___73UC9:global(.__wab_instance) {
+.paddingLeftAndRightTextfield:global(.__wab_instance) {
   position: relative;
 }
 .svg__bBI {
@@ -736,7 +736,7 @@
   transform: none;
   height: 12px;
 }
-.propertiesTextfield__kWsP:global(.__wab_instance) {
+.paddingTopAndBottomTextfield:global(.__wab_instance) {
   position: relative;
 }
 .svg__bAfxZ {
@@ -779,7 +779,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield___6UT2L:global(.__wab_instance) {
+.gapTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
@@ -879,7 +879,7 @@
   position: relative;
   user-select: none;
 }
-.propertiesTextfield___7RgIt:global(.__wab_instance) {
+.flexTextfield:global(.__wab_instance) {
   position: relative;
   flex-shrink: 0;
 }
